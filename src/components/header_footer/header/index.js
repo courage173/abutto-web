@@ -63,7 +63,7 @@ class Header extends Component {
             if (item.name === "Register" || item.name === "Login") {
                 return <div key={item.name + i} className='reg_reg_btn'><Link className='reg_reg_link' to={item.linkTo} key={i}>{item.name}</Link></div>
             } else {
-                return <Link key={item.name + i} className='links' to={item.linkTo} key={i}>
+                return <Link key={item.name + i} className='links' to={item.linkTo}>
                     {item.name}
                 </Link>
             }

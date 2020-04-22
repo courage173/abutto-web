@@ -126,8 +126,7 @@ class NeedHelpModal extends Component {
                             change={(element) => this.updateForm(element)}
                             useStyle={true}
                             st={{ border: 'none', backgroundColor: '#fff', boxShadow: '0px 7px 20px rgba(55, 80, 178, 0.4)' }}
-                            inPutStyle={{ paddingLeft: '10px' }}
-
+                            inPutStyle={{ paddingLeft: '10px', width: '92%' }}
                         />
                         <FormField
                             id={'location'}
@@ -135,10 +134,9 @@ class NeedHelpModal extends Component {
                             change={(element) => this.updateForm(element)}
                             useStyle={true}
                             st={{ border: 'none', backgroundColor: '#fff', boxShadow: '0px 7px 20px rgba(55, 80, 178, 0.4)' }}
-                            inPutStyle={{ paddingLeft: '10px' }}
+                            inPutStyle={{ paddingLeft: '10px', width: '92%' }}
 
                         />
-
                         <div className='location_wrapper'>
                             <MapSection />
                         </div>
@@ -148,8 +146,6 @@ class NeedHelpModal extends Component {
                                 title='Need help'
                             />
                         </div>
-
-
                     </div >
                 </div>
             </CSSTransition>
