@@ -1,0 +1,25 @@
+.my_link {
+
+    font-family: Montserrat;
+    font-style: normal;
+    text-align: center;
+    height: 27px;
+    padding: 7px 7px 0px 7px;
+    vertical-align: middle;
+    margin-right: 20px;
+    border-radius: 10px;
+    background: #3750B2;
+    border: 1px solid #3750B2;
+    box-shadow: 0px 7px 20px rgba(55, 80, 178, 0.4);
+    border-radius: 10px;
+}
+
+.link_default{
+    text-decoration: none;
+    font-family: Montserrat;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+
+}

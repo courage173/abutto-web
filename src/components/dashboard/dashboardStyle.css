@@ -1,0 +1,139 @@
+.dashboard_wrapper{
+    height: 100%;
+    background: rgba(245, 247, 251, 0.7);
+}
+.dashboard_container{
+    padding-top: 50px;
+    display: flex;
+    height: 100vh;
+}
+
+/* link section styles left-hand*/
+.profile_image {
+    margin: 43px 26px;
+}
+
+.profile_name {
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #3750B2;
+}
+.dashboardLink{
+    
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(55, 80, 178, 0.8);
+    
+}
+.links_wrapper{
+    display: flex;
+    width: 220px;
+    position: fixed;
+    flex-direction: column;
+    font-family: Montserrat;
+    font-style: normal;
+    height: 100%;
+    z-index: 999;
+    background: #FFFFFF;
+    border: 0.2px solid #3750B2;
+    box-shadow: 8px 0px 15px rgba(55, 80, 178, 0.6);
+    align-items: center;
+}
+.profile_pic_container{
+    height: 185px;
+    width: 100%;
+    background: url('../../assets/link_bg.svg');
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: 113%;
+    background-position-x: 0px;
+    background-position-y: -22px
+
+}
+.non_links{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    color: #C4C4C4;
+    margin-left: 43px;
+}
+#logoutLink {
+    margin-left: 40px;
+    margin-top: 50px!important
+}
+.links {
+    color: hsl(0, 7%, 44%)
+}
+
+/* right section side styles */
+.dashboard_right_section {
+    margin-left: 255px;
+    margin-right: 55px;
+    flex: 1;
+    padding-top: 40px;
+}
+.dashboard_card{
+    display: flex;
+    font-family: Montserrat;
+    font-style: normal;
+
+}
+
+.dash_card1{
+    background: rgba(55, 80, 178, 0.8);
+    box-shadow: 0px 4px 20px rgba(55, 80, 178, 0.4);
+    border-radius: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 305px;
+    height: 104px;
+    color: #FFFFFF;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.dash_card2{
+    background: #EDF3FB;
+    box-shadow: 0px 4px 10px rgba(196, 196, 196, 0.7);
+    border-radius: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 244px;
+    height: 86px;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.line_break{
+    margin-top: 40px;
+}
+.line_break p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #C4C4C4;
+    margin-left: 10px;
+}
+
+.line_break hr{
+border: 1px solid #C4C4C4;
+}

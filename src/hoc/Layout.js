@@ -1,18 +1,20 @@
 import React from 'react'
-import Header from '../components/header_footer/header'
+import LinkSection from '../components/dashboard/linkSection';
+import DashboardHeader from '../components/header_footer/dashboardHeader/DashboardHeader'
 
-const Layout = (props) => {
+const DashboardWrap = (props) => {
     return (
         <div>
-            <div>
-               <Header />
+            <DashboardHeader />
+            <div className='dashboard_wrapper'>
+                <LinkSection />
+                <div className='dashboard_container'>
+                    {props.children}
+                </div>
             </div>
-            
-            <div className='page_container'>
-               {props.children}
-            </div>
+
         </div>
     )
 }
 
-export default Layout
+export default DashboardWrap

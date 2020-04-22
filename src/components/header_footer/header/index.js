@@ -1,48 +1,48 @@
-import React,{Component} from 'react'
+import React, { Component } from 'react'
 import './header.css'
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
 
     state = {
-        links:[
+        links: [
             {
-                name:'ABOUT',
-                linkTo:'/about',
+                name: 'ABOUT',
+                linkTo: '/about',
                 public: true
             },
             {
-                name:'BLOG',
-                linkTo:'/blog',
+                name: 'BLOG',
+                linkTo: '/blog',
                 public: true
             },
             {
-                name:'SERVICES',
-                linkTo:'/blog',
+                name: 'SERVICES',
+                linkTo: '/blog',
                 public: true
             },
             {
-                name:'SUPPORT',
-                linkTo:'/support',
+                name: 'SUPPORT',
+                linkTo: '/support',
                 public: true
             },
             {
-                name:'CONTACT',
-                linkTo:'/contact',
+                name: 'CONTACT',
+                linkTo: '/contact',
                 public: true
             },
-           
-            
+
+
         ],
         pages: [
             {
-                name:'Register',
-                linkTo:'/register',
+                name: 'Register',
+                linkTo: '/register',
                 public: true
             },
             {
-                name:'Login',
-                linkTo:'/login',
+                name: 'Login',
+                linkTo: '/login',
                 public: true
             }
         ]
@@ -53,31 +53,25 @@ class Header extends Component {
         //will do a check if the user is authenticated or not to display private routes
         //will implement if login api's are available
         links.forEach((item) => {
-            if(item.public){
+            if (item.public) {
                 list.push(item)
-            }else{
+            } else {
                 //
             }
-
-            
         })
-
-        return list.map((item,i)=> {
-            
-
-            if(item.name === "Register" || item.name === "Login"){
-                return <div className='reg_reg_btn'>{item.name}</div>
-            }else{
-                return <Link className='links' to={item.linkTo} key={i}>
-                {item.name}
-              </Link> 
+        return list.map((item, i) => {
+            if (item.name === "Register" || item.name === "Login") {
+                return <div key={item.name + i} className='reg_reg_btn'><Link className='reg_reg_link' to={item.linkTo} key={i}>{item.name}</Link></div>
+            } else {
+                return <Link key={item.name + i} className='links' to={item.linkTo} key={i}>
+                    {item.name}
+                </Link>
             }
-            
-    })
+        })
     }
 
 
-    render(){
+    render() {
         return (
             <header>
                 <div className='container'>
@@ -86,21 +80,21 @@ class Header extends Component {
                             Abutto
                         </div>
                     </div>
-                    <div style={{width: '50%'}}>
+                    <div style={{ width: '50%' }}>
                         <div className='link-wrapper'>
                             {this.showLink(this.state.links)}
                         </div>
                     </div>
                     <div>
                         <div className='log_reg_btn_wrap'>
-                           {this.showLink(this.state.pages)}
+                            {this.showLink(this.state.pages)}
                         </div>
                     </div>
-               </div>
+                </div>
             </header>
         )
     }
-   
+
 }
 
 export default Header

@@ -1,6 +1,7 @@
 
 header {
     position: fixed;
+    top: 0;
     z-index: 999;
     width: 100%;
     border-bottom: 1px solid white;
@@ -51,11 +52,21 @@ header .container {
     height: 25px;
     width: 80px;
     text-align: center;
-    color: #fff;
     border-radius: 30px;
     padding: 2px 10px 0 10px;
     font-size: small;
     margin-top: 15px;
     margin-right: 25px;
     margin-left: 5px;
+}
+.reg_reg_link{
+    color: #fff;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.06em;
 }
