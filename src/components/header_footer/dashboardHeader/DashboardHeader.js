@@ -11,7 +11,7 @@ const DashboardHeader = () => {
                 <div className='logo' style={{ marginLeft: '10px' }} >Abutto</div>
                 <div className='dash_header_left_side'>
                     <FontAwesomeIcon icon={faBell} />
-                    <img src={bosky} alt='profile' style={{ height: '30px', width: '30px', borderRadius: '50%', margin: '0 20px' }} />
+                    <img src={bosky} alt='profile' style={{ height: '30px', width: '30px', borderRadius: '50%', margin: '0 20px', objectFit: 'cover' }} />
                     <p>Hi, <span>Bosky</span></p>
                 </div>
             </div>

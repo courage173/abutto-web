@@ -5,9 +5,9 @@ import MiddleSection from './middleSection';
 import BottomSection from './bottomSection';
 import Header from '../header_footer/header'
 import Footer from '../header_footer/footer/footer'
-import NeedHelpModal from './need_provide_help/NeedHelpModal'
+import NeedHelpModal from './need_provide_help_modal/NeedHelpModal'
 import Backdrop from './backdrop/Backdrop'
-import ProvideHelpModal from './need_provide_help/ProvideHelp'
+import ProvideHelpModal from './need_provide_help_modal/ProvideHelp'
 
 const LandingPage = () => {
 

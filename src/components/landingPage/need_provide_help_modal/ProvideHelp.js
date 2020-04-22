@@ -3,7 +3,8 @@ import CSSTransition from "react-transition-group/CSSTransition"
 import './needHelpStyle.css';
 import { update, generateData, isFormValid } from '../../utils/form/formActions'
 import FormField from '../../utils/form/formfield';
-import MyButton from '../../utils/button/Button'
+import MyButton from '../../utils/button/Button';
+import MapSection from '../../utils/map/Map'
 
 
 class ProvideHelpModal extends Component {
@@ -140,7 +141,7 @@ class ProvideHelpModal extends Component {
                             change={(element) => this.updateForm(element)}
                             useStyle={true}
                             st={{ border: 'none', backgroundColor: '#fff', boxShadow: '0px 7px 20px rgba(55, 80, 178, 0.4)' }}
-                            inPutStyle={{ paddingLeft: '10px' }}
+                            inPutStyle={{ paddingLeft: '10px', width: '92%' }}
 
                         />
                         <FormField
@@ -149,7 +150,7 @@ class ProvideHelpModal extends Component {
                             change={(element) => this.updateForm(element)}
                             useStyle={true}
                             st={{ border: 'none', backgroundColor: '#fff', boxShadow: '0px 7px 20px rgba(55, 80, 178, 0.4)' }}
-                            inPutStyle={{ paddingLeft: '10px' }}
+                            inPutStyle={{ paddingLeft: '10px', width: '92%' }}
 
                         />
                         <FormField
@@ -158,12 +159,12 @@ class ProvideHelpModal extends Component {
                             change={(element) => this.updateForm(element)}
                             useStyle={true}
                             st={{ border: 'none', backgroundColor: '#fff', boxShadow: '0px 7px 20px rgba(55, 80, 178, 0.4)' }}
-                            inPutStyle={{ paddingLeft: '10px' }}
+                            inPutStyle={{ paddingLeft: '10px', width: '92%' }}
 
                         />
 
                         <div className='location_wrapper'>
-
+                            <MapSection />
                         </div>
                         <div style={{ marginTop: '25px', marginBottom: '30px' }}>
                             <MyButton
