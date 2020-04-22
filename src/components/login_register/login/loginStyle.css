@@ -1,0 +1,104 @@
+.welcome_wrapper{
+    font-family: Roboto;
+    font-style: normal;
+    color: #3750B2;
+    margin-left: 10vh;
+    margin-top: 7.5vh;
+}
+.welcome_wrapper h4 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    margin: 0;
+    letter-spacing: 0.035em;
+}
+.welcome_wrapper p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.035em;
+
+}
+
+.form_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin-top: 5vh;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.check_wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.035em;
+    color: #3750B2;
+    margin-top: 15px;
+
+}
+
+input[type="checkbox"] {
+    visibility: hidden;
+  }
+input[type="checkbox"] + label:before {
+    border: 1px solid #333;
+    content: "\00a0";
+    display: inline-block;
+    font: 16px/1em sans-serif;
+    height: 16px;
+    margin: 0 .25em 0 0;
+    padding: 0;
+    vertical-align: top;
+    width: 16px;
+  }
+  input[type="checkbox"]:checked + label:before {
+    background: #3750B2;
+    border-radius: 2px;
+    color: #fff;
+    content: "\2713";
+    text-align: center;
+  }
+  input[type="checkbox"]:checked + label:after {
+    font-weight: bold;
+  }
+  
+  input[type="checkbox"]:focus + label::before {
+      outline: rgb(59, 153, 252) auto 5px;
+  }
+
+  .option_signin{
+    width: 100%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #3750B2;
+    margin-top: 50px;
+  }
+.account_wrapper {
+    margin-top: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.035em
+}
+.account_wrapper span {
+    color: #3750B2;
+}

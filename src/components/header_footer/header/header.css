@@ -1,0 +1,72 @@
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    border-bottom: 1px solid white;
+    background-color: #fff;
+}
+
+.logo {
+    font-family: Kaushan Script;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 58px;
+    color: rgba(55, 80, 178, 0.7);
+}
+
+.links {
+    font-family: Gill Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    color: #3750B2;
+    text-decoration: none;
+}
+
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 100px 0px 50px;
+}
+
+.link-wrapper {
+    flex-grow: 3;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 0 0;
+}
+
+.log_reg_btn_wrap {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.reg_reg_btn {
+    background: #3750B2;
+    height: 25px;
+    width: 80px;
+    text-align: center;
+    border-radius: 30px;
+    padding: 2px 10px 0 10px;
+    font-size: small;
+    margin-top: 15px;
+    margin-right: 25px;
+    margin-left: 5px;
+}
+.reg_reg_link{
+    color: #fff;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.06em;
+}

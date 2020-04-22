@@ -1,0 +1,28 @@
+
+.help_table{
+    border-collapse: separate;
+    border-spacing: 0 20px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+}
+.help_table th {
+font-size: 14px;
+line-height: 18px;
+color: #C4C4C4;
+}
+
+.tr{
+    background: rgba(237, 243, 251, 0.8);
+    border-radius: 15px;
+    height: 70px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #3F3D56;
+}
+
+/* td {
+    height: 100px;
+    border: 1px solid black;
+} */
