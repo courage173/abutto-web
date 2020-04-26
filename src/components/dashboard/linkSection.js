@@ -65,7 +65,8 @@ class LinkSection extends Component {
                 linkTo: '/logout',
                 public: false,
                 id: 'logoutLink'
-            }
+            },
+
         ],
 
     }
