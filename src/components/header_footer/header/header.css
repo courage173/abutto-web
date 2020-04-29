@@ -1,4 +1,19 @@
 
+/* mobile and tablet views */
+@media only screen and (max-width: 768px) {
+ header .container{
+     margin: 0;
+ }
+ .link-wrapper .log_reg_btn_wrap{
+     display: none;
+ }
+}
+
+
+
+
+
+/* mobile view end and web view begins */
 header {
     position: fixed;
     top: 0;
