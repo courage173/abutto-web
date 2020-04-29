@@ -1,0 +1,56 @@
+.map_section_container{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    display: flex;
+    margin: 10px 20px 0 20px;
+    color: #3750B2
+}
+
+.map_left_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+.map_right_section{
+    width: 300px
+}
+
+.map_top_sec{
+    display: flex;
+    justify-content: space-between;
+}
+
+.exchange_arrow_icon{
+    height: 23px;
+    width: 23px;
+    border-radius: 50%;
+    background: #3750B2;
+    color: #ffffff;
+    transform: rotate(139deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.horizontal_line{
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    border: 1px dashed #ECEBED;
+}
+
+.map_bottom_sec{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+.map_button{
+    background: #D0C9D6;
+    border-radius: 50%;
+    border-style: none;
+    border-color: none;
+    border: none;
+    cursor: pointer;
+}
+

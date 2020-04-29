@@ -1,0 +1,25 @@
+.testimony_container{
+    background: #FFFFFF;
+    box-shadow: 1px 1px 14px rgba(28, 26, 26, 0.25);
+    border-radius: 10px;
+    margin: 35px 30px;
+    padding: 30px;
+    display: flex;    
+}
+
+.testimony_card_text_section{
+    padding: 10px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    color: #253663;
+}
+.testimony_card_text_section h5 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 27px
+}
+.testimony_card_text_section p {
+    font-size: 16px;
+    line-height: 27px;
+}
