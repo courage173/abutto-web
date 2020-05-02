@@ -2,15 +2,18 @@ import React, { useState } from 'react'
 import LinkSection from '../components/dashboard/linkSection';
 import DashboardHeader from '../components/header_footer/dashboardHeader/DashboardHeader';
 import Backdrop from '../components/landingPage/backdrop/Backdrop'
+import './layout.css'
 
 const DashboardWrap = (props) => {
     const [isMobile, setMobile] = useState(false)
     return (
         <div>
-            <Backdrop show={isMobile} click={() => setMobile(!isMobile)} />
+            <div className='dashboard_backdrop'>
+                <Backdrop show={isMobile} click={() => setMobile(!isMobile)} />
+            </div>
             <DashboardHeader open={() => setMobile(!isMobile)} />
             <div className='dashboard_wrapper'>
-                <LinkSection isMobile={isMobile} close={() => setMobile(!isMobile)} />
+                <LinkSection isMobile={isMobile} close={() => setMobile(false)} />
                 <div className='dashboard_container'>
                     {props.children}
                 </div>

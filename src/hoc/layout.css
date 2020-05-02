@@ -1,0 +1,9 @@
+
+.dashboard_backdrop{
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    .dashboard_backdrop{
+        display: block;
+    }
+}

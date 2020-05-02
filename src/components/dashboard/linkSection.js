@@ -87,6 +87,14 @@ class LinkSection extends Component {
                     </div>
                 )
             }
+            else if (link.name === 'Logout') {
+                return (
+                    <Link onClick={this.props.close} id={link.id && link.id} className='links' to={link.linkTo} key={link.name + i} style={{ fontSize: '16px' }}>
+                        {link.name}
+                    </Link>
+                )
+
+            }
             else {
                 return (
                     <Link onClick={this.props.close} id={link.id && link.id} className='links' to={link.linkTo} key={link.name + i} style={{ marginTop: '18px', fontSize: '16px' }}>
