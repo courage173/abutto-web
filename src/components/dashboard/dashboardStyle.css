@@ -72,7 +72,7 @@
 }
 #logoutLink {
     margin-left: 40px;
-    margin-top: 50px!important
+    margin-top: 50px
 }
 .links {
     color: hsl(0, 7%, 44%)
@@ -169,5 +169,8 @@ border: 1px solid #C4C4C4;
         justify-content: center;
         display: flex;
         margin-bottom: 10px;
+    }
+    #logoutLink{
+        margin-top: 18px!important;
     }
 }
