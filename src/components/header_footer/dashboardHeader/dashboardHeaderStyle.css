@@ -21,6 +21,9 @@
     display: flex;
     justify-content: space-between;
 }
+.mobile_bars{
+    display: none;
+}
 .dash_header_left_side{
     display: flex;
     align-items: center;
@@ -30,4 +33,28 @@
     font-size: 18px;
     line-height: 22px;
     color: rgba(0, 0, 0, 0.8);
+}
+
+@media only screen and (max-width: 768px) {
+    .dashboard_header_container {
+        width: 100%;
+        margin-left: 0;
+    }
+    .mobile_bars{
+        display: block;
+        margin: 10px;
+        width: 20px;
+        size: 20px;
+        margin-top: 20px;
+    }
+    .dash_header_left_side img{
+        margin: 0px 9px!important
+    }
+    .dash_header_left_side p {
+        font-size: 14px;
+        margin-right: 5px;
+    }
+    .logo{
+        font-size: 28px!important
+    }
 }

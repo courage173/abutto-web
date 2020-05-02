@@ -33,6 +33,45 @@ const HelpCard = (props) => {
                 </tr>
             </tbody>
         ))
+
+
+    }
+    const displayMobileCard = () => {
+        return props.data.map((item, i) => (
+            <div className='mobile_help_wrapper'>
+                <div className='mobile_help_container'>
+                    <div className='mobile_card_title'>
+                        <p>DATE</p>
+                        <p>TYPE OF ORDER</p>
+                        <p>QUANTITY</p>
+                        <p>LOCATION</p>
+
+                    </div>
+                    <div className='mobile_card_content'>
+                        <p> {item.date} </p>
+                        <p>{item.type}</p>
+                        <p>{item.quantity}</p>
+                        <p>{item.location}</p>
+                    </div>
+                </div>
+                <div className='mobile_card_btn'>
+                    <MyButton
+                        type='default'
+                        title='view'
+                        linkTo='view_order'
+                        altStyle={{ color: '#000000', fontWeight: 'bold', fontSize: '12px' }}
+                        sty={{ background: 'none', border: 'none', width: '50px' }}
+                    />
+                    <MyButton
+                        type='default'
+                        title='Cancel'
+                        linkTo='cancel_order'
+                        altStyle={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: '12px' }}
+                        sty={{ background: 'rgba(225, 55, 55, 0.9)', border: 'none', width: '50px', boxShadow: 'none' }}
+                    />
+                </div>
+            </div>
+        ))
     }
     return (
         <div>
@@ -49,6 +88,9 @@ const HelpCard = (props) => {
                 </thead>
                 {displayCard()}
             </table>
+            <div className='help_mobileview_container'>
+                {displayMobileCard()}
+            </div>
         </div>
     )
 }
