@@ -78,12 +78,12 @@ class Header extends Component {
                             Abutto
                         </div>
                     </div>
-                    <div style={{ width: '50%' }}>
+                    <div className='link_container' style={{ width: '50%' }}>
                         <div className='link-wrapper'>
                             {this.showLink(this.state.links)}
                         </div>
                     </div>
-                    <div>
+                    <div className='reg_log'>
                         <div className='log_reg_btn_wrap'>
                             {this.showLink(this.state.pages)}
                         </div>

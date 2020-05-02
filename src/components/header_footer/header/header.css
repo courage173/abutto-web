@@ -1,12 +1,22 @@
 
 /* mobile and tablet views */
 @media only screen and (max-width: 768px) {
+    .container{
+        margin: 0px 20px!important;
+    }
  header .container{
      margin: 0;
  }
- .link-wrapper .log_reg_btn_wrap{
+ .reg_log{
      display: none;
  }
+ .link_container{
+    display: none;
+ }
+ .link-wrapper .log_reg_btn_wrap{
+     display: none!important;
+ }
+
 }
 
 

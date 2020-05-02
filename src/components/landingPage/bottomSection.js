@@ -33,7 +33,7 @@ const BottomSection = () => {
     return (
         <div className='bottom-wrapper'>
             <h5 className='bottom_tittle'>What are Users Saying</h5>
-            <div style={{ width: '100%' }}>
+            <div className='testimo_slide' style={{ width: '100%' }}>
                 <TestimonySlider data={testimonies} />
             </div>
             <div className='app_download_wrapper'>

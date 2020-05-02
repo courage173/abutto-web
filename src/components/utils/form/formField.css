@@ -1,7 +1,9 @@
 .formBlock input {
-    border-width:0px;
-    border:none;
+    width: 208px;
+    border-width: 0px;
+    border: none;
     height: 20px;
+    margin-right: 43px;
 }
 
 .formBlock {
