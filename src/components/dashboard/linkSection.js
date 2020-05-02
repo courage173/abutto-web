@@ -76,7 +76,7 @@ class LinkSection extends Component {
             if (link.name === 'Dashboard') {
                 return (
                     <div key={link.name + i} className='dashboardLink'>
-                        <Link to={link.linkTo} key={i}><FontAwesomeIcon icon={faTh} style={{ color: 'rgba(55, 80, 178, 0.8)', marginRight: '10px' }} />{link.name}</Link>
+                        <Link onClick={this.props.close} to={link.linkTo} key={i}><FontAwesomeIcon icon={faTh} style={{ color: 'rgba(55, 80, 178, 0.8)', marginRight: '10px' }} />{link.name}</Link>
                     </div>
                 )
             }
@@ -89,7 +89,7 @@ class LinkSection extends Component {
             }
             else {
                 return (
-                    <Link id={link.id && link.id} className='links' to={link.linkTo} key={link.name + i} style={{ marginTop: '18px', fontSize: '16px' }}>
+                    <Link onClick={this.props.close} id={link.id && link.id} className='links' to={link.linkTo} key={link.name + i} style={{ marginTop: '18px', fontSize: '16px' }}>
                         {link.icon ? link.name === 'Provide Help' || link.name === 'Need Help' || link.name === 'Support' ?
                             <img src={link.icon} alt='icon' style={{ marginRight: '15px' }} /> :
                             <FontAwesomeIcon icon={link.icon} style={{ marginRight: '20px', color: '#3750B2' }} /> : null} {link.name}
@@ -98,9 +98,11 @@ class LinkSection extends Component {
             }
         })
     }
+
     render() {
+        const style = ['links_wrapper', this.props.isMobile ? 'open_links' : 'close_links']
         return (
-            <div className='links_wrapper'>
+            <div className={style.join(' ')}>
                 <div className='profile_pic_container'>
                     <div className='profile_image'>
                         <img src={bosky} alt='profile pics' style={{ height: '109px', width: '108px', borderRadius: '50%', objectFit: 'cover' }} />

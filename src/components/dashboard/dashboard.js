@@ -41,7 +41,7 @@ class Dashboard extends Component {
                 <div className='dashboard_card'>
                     <div className={this.state.isActive === 'provide help' ? 'dash_card1' : 'dash_card2'} onClick={() => this.handleHelp('provide help')}>
                         <div style={{ margin: '0', fontWeight: 'bold', fontSize: '18px' }}>Provide Help</div>
-                        <div style={{ margin: '0', fontSize: '14px' }}>Reach out to others in<br /> need of help</div>
+                        <div id='btn_provide_text2' style={{ margin: '0', fontSize: '14px' }}>Reach out to others in<br /> need of help</div>
                     </div>
                     <div className={this.state.isActive === 'need help' ? 'dash_card1' : 'dash_card2'} onClick={() => this.handleHelp('need help')}>
                         <div style={{ margin: '0', fontWeight: 'bold', fontSize: '18px' }}>Need Help</div>
@@ -55,7 +55,7 @@ class Dashboard extends Component {
                 <div>
                     <HelpCard data={helpData} />
                 </div>
-                <div>
+                <div className='view_schedule_btn'>
                     <MyButton
                         type='default'
                         title='view all shedule'

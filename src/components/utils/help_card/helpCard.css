@@ -26,3 +26,47 @@ color: #C4C4C4;
     height: 100px;
     border: 1px solid black;
 } */
+.help_mobileview_container{
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+.help_table{
+    display: none;
+}
+.help_mobileview_container{
+    display: block;
+}
+.mobile_help_container{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-around;
+}
+.mobile_help_container div{
+    display: flex;
+}
+.mobile_card_title{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 16px;
+    color: #C4C4C4;
+}
+.mobile_card_content{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 16px;
+}
+.mobile_card_btn{
+    display: flex;
+    justify-content: center;
+}
+.mobile_help_wrapper{
+    background: white;
+    padding-bottom: 16px;
+    border-radius: 8px;
+    margin: 0px 5px 14px 5px;
+}
+}
