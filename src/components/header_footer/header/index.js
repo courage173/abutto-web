@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import './header.css'
 import { Link } from 'react-router-dom';
 
@@ -70,13 +72,18 @@ class Header extends Component {
         })
     }
     render() {
+        const { action } = this.props
         return (
+
             <header>
                 <div className='container'>
                     <div>
                         <div className='logo'>
                             Abutto
                         </div>
+                    </div>
+                    <div>
+                        <FontAwesomeIcon icon={faBars} className='landing_page_menu_bar' onClick={action} />
                     </div>
                     <div className='link_container' style={{ width: '50%' }}>
                         <div className='link-wrapper'>

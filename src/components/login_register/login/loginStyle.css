@@ -104,5 +104,21 @@ input[type="checkbox"] + label:before {
 }
 
 @media only screen and (max-width: 768px) {
-
+  .welcome_wrapper{
+    margin-top: 15px;
+}
+.welcome_wrapper h4 {
+  font-size: 22px;
+  line-height: 37px
+}
+.form_container{
+    margin-top: 0;
+}
+.option_signin{
+    margin-top: 17px;
+}
+#continue_with_fb_btn{
+  margin-top: 14px!important;
+}
+  
 }

@@ -116,6 +116,7 @@ class Login extends Component {
                                 type='default'
                                 title='Log in'
                                 linkTo='/dashboard'
+                                sty={{ width: '300px', margin: '0px' }}
                             />
                         </div>
                     </form>
@@ -123,12 +124,13 @@ class Login extends Component {
                         <p style={{ margin: '0' }}>or</p>
                         <p style={{ margin: '0', cursor: 'pointer' }}>Sign in with</p>
                     </div>
-                    <div style={{ marginTop: '30px' }}>
+                    <div id='continue_with_fb_btn' style={{ marginTop: '30px' }}>
                         <MyButton
                             type='default'
                             title='continue with facebook'
                             font={<img style={{ marginRight: '2px' }} src={facebook} alt='google' />}
                             linkTo='/facebook'
+                            sty={{ margin: '0px' }}
                         />
                     </div>
                     <div style={{ marginTop: '15px', width: '220px' }}>
@@ -136,7 +138,7 @@ class Login extends Component {
                             type='default'
                             title='Google Play'
                             altStyle={{ color: '#3750B2' }}
-                            sty={{ background: 'none', border: 'none' }}
+                            sty={{ background: 'none', border: 'none', margin: '0px' }}
                             font={<img style={{ marginRight: '2px' }} src={google} alt='google' />}
                             linkTo='/google'
                         />

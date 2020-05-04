@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './profileStyle.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCamera, faEye, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import bosky from '../../assets/bosky.png';
+import bosky from '../../../assets/bosky.png';
 
 class Profile extends Component {
     render() {
@@ -16,7 +16,7 @@ class Profile extends Component {
 
                 <div className="edit-section container-fluid">
                     <div className="blue-bg">
-                        <button className="photo"><FontAwesomeIcon icon={ faCamera } className="camera" />Change Profile</button>
+                        <button className="photo"><FontAwesomeIcon icon={faCamera} className="camera" />Change Profile</button>
                     </div>
 
                     <div className="user-edit-section">
@@ -40,8 +40,8 @@ class Profile extends Component {
                                     <input className="input" type="text" placeholder="Jane" /><br />
                                     <div className="first">Password</div><br />
                                     <input className="input" type="text" placeholder="********"
-                                     /><span><FontAwesomeIcon icon={faEye} style={{ color: '#DADADA', cursor: 'pointer', marginLeft: '-2rem' }} /></span>
-                                     <div className="first">Email</div><br />
+                                    /><span><FontAwesomeIcon icon={faEye} style={{ color: '#DADADA', cursor: 'pointer', marginLeft: '-2rem' }} /></span>
+                                    <div className="first">Email</div><br />
                                     <input className="input" type="email" placeholder="jandoe@gmail.com" /><br />
                                 </div>
                                 <div className="right-input">

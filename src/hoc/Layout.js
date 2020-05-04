@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import LinkSection from '../components/dashboard/linkSection';
+import Sidebar from '../components/dashboard/Sidebar';
 import DashboardHeader from '../components/header_footer/dashboardHeader/DashboardHeader';
 import Backdrop from '../components/landingPage/backdrop/Backdrop'
 import './layout.css'
@@ -13,7 +13,7 @@ const DashboardWrap = (props) => {
             </div>
             <DashboardHeader open={() => setMobile(!isMobile)} />
             <div className='dashboard_wrapper'>
-                <LinkSection isMobile={isMobile} close={() => setMobile(false)} />
+                <Sidebar isMobile={isMobile} close={() => setMobile(false)} />
                 <div className='dashboard_container'>
                     {props.children}
                 </div>

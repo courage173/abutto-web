@@ -16,9 +16,7 @@
 }
 
 
-@media (max-width: 768px){
-    
-}
+
 .legend {
     font-family: Roboto;
     font-style: normal;
@@ -70,3 +68,14 @@ select > option {
     border-radius: 10px;
  }
 
+ @media only screen and (max-width: 768px){
+    .mobileStyle{
+        width: 13rem;
+        height: 38px;
+        margin-top: 16px
+    }
+    input, select, textarea {
+        font-size: 16px;
+      }
+    
+}

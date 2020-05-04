@@ -72,14 +72,7 @@
     }
     .right{
         width: 100%;
+        background-image: none;
     }
-    .welcome_wrapper{
-        margin-top: 15px;
-    }
-    .form_container{
-        margin-top: 0;
-    }
-    .option_signin{
-        margin-top: 25px;
-    }
+    
   }
