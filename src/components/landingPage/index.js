@@ -11,10 +11,10 @@ import ProvideHelpModal from './need_provide_help_modal/ProvideHelp'
 
 const LandingPage = () => {
 
+  const [isOpen, handleOpen] = useState(false)
   const [needModal, setModal] = useState(false)
   const [provideHelp, setModalToOpen] = useState(false)
   const handleModal = (p, value) => {
-    console.log(p, value)
     if (p === 'need' || p === 'close') {
       setModal(value)
     }
@@ -23,27 +23,23 @@ const LandingPage = () => {
     }
 
   }
-
-
-
-
   return (
     <div>
       <div>
-        <Header />
+        <Header action={() => handleOpen(!isOpen)} />
       </div>
       <div>
         <div className='page_container'>
           {needModal || provideHelp ? <Backdrop
             show={needModal || provideHelp}
-            click={(p) => handleModal('close', false)}
+            click={() => handleModal('close', false)}
 
           /> : null}
-          <NeedHelpModal modal={needModal} />
-          <ProvideHelpModal modal={provideHelp} />
+          <NeedHelpModal modal={needModal} close={() => handleModal('need', false)} />
+          <ProvideHelpModal modal={provideHelp} close={() => handleModal('provide', false)} />
 
 
-          <TopSection />
+          <TopSection isOpen={isOpen} />
           <MiddleSection
             click={(m, value) => handleModal(m, value)}
           />

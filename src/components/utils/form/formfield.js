@@ -3,10 +3,7 @@ import './formField.css'
 
 const Formfield = ({ formdata, change, id, legend,
     fontIcon, fontIcon2, useStyle,
-    setFocus, isFocus, st, inPutStyle, selStyle }) => {
-
-
-
+    setFocus, isFocus, st, inPutStyle, selStyle, ApplyMobileStyle, mobileStyle }) => {
     const showError = () => {
         let errorMessage = null;
 
@@ -20,42 +17,43 @@ const Formfield = ({ formdata, change, id, legend,
 
         return errorMessage;
     }
-
-
     const renderTemplate = () => {
         let formTemplate = null;
-
+        //the applymobile props is to check if the view is mobile and apply extra styles if needed for responsiveness
+        let styles = ['formBlock', ApplyMobileStyle ? mobileStyle : ' ']
         switch (formdata.element) {
             case ('input'):
                 formTemplate = (
-                    <div className="formBlock" style={st ? st : null}>
-                        {formdata.showlabel ?
-                            <div className="label_inputs">{formdata.config.label}</div>
-                            : null}
+                    <Fragment>
+                        <div className={styles.join(' ')} style={st ? st : null}>
+                            {formdata.showlabel ?
+                                <div className="label_inputs">{formdata.config.label}</div>
+                                : null}
+                            {fontIcon && fontIcon}
+                            <input
+                                {...formdata.config}
+                                value={formdata.value}
+                                onBlur={(event) => change({ event, id, blur: true })}
+                                onChange={(event) => change({ event, id })}
+                                style={inPutStyle}
+                            />
+                            {showError()}
+                        </div>
 
-                        <input
-                            {...formdata.config}
-                            value={formdata.value}
-                            onBlur={(event) => change({ event, id, blur: true })}
-                            onChange={(event) => change({ event, id })}
-                            style={inPutStyle}
-                        />
-                        {showError()}
-                    </div>
+                    </Fragment>
                 )
                 break;
             case ('fieldset'):
                 formTemplate = (
-                    <div className="formBlock" style={isFocus ? st : null}>
+                    <div className={styles.join(' ')}>
                         {formdata.showlabel ?
                             <div className="label_inputs">{formdata.config.label}</div>
                             : null}
-                        <p className='legend'>{legend}</p>
+                        {legend ? <p className='legend'>{legend}</p> : null}
                         <div className={useStyle ? 'icon_input_wrapper' : null}>
                             {fontIcon && fontIcon}
                             <input
                                 style={{ background: '#E8F5FF' }}
-                                onFocus={setFocus}
                                 {...formdata.config}
                                 value={formdata.value}
                                 onBlur={(event) => change({ event, id, blur: true })}
@@ -69,7 +67,11 @@ const Formfield = ({ formdata, change, id, legend,
                 break;
             case ('select'):
                 formTemplate = (
-                    <div className="formBlock" style={{ border: 'none', backgroundColor: '#fff', boxShadow: '0px 7px 20px rgba(55, 80, 178, 0.4)', marginTop: selStyle }} >
+                    <div className={styles.join(' ')}
+                        style={{
+                            border: 'none', backgroundColor: '#fff',
+                            boxShadow: '0px 7px 20px rgba(55, 80, 178, 0.4)', marginTop: selStyle
+                        }} >
                         {
                             formdata.showlabel ?
                                 <div className="label_inputs">{formdata.config.label}</div>
@@ -102,7 +104,7 @@ const Formfield = ({ formdata, change, id, legend,
                 break;
             case ('textarea'):
                 formTemplate = (
-                    <div className="formBlock">
+                    <div className={styles.join(' ')}>
                         {formdata.showlabel ?
                             <div className="label_inputs">{formdata.config.label}</div>
                             : null}
@@ -118,7 +120,7 @@ const Formfield = ({ formdata, change, id, legend,
                 break;
             case ('checkbox'):
                 formTemplate = (
-                    <div className="formBlock">
+                    <div className={styles.join(' ')}>
                         {formdata.showlabel ?
                             <div className="label_inputs">{formdata.config.label}</div>
                             : null}

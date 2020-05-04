@@ -2,15 +2,15 @@
 
 export const validate = (element, formdata = []) => {
     let error = [true, ''];
-
-
     if (element.validation.email) {
+
         const valid = /\S+@\S+\.\S+/.test(element.value)
         const message = `${!valid ? 'Must be a valid email' : ''}`;
         error = !valid ? [valid, message] : error;
     }
 
     if (element.validation.confirm) {
+
         const valid = element.value.trim() === formdata[element.validation.confirm].value;
         const message = `${!valid ? 'Passwords do not match' : ''}`;
         error = !valid ? [valid, message] : error;
@@ -33,8 +33,6 @@ export const update = (element, formdata, formName) => {
     const newElement = {
         ...newFormdata[element.id]
     }
-    console.log(newElement)
-
     newElement.value = element.event.target.value;
 
     if (element.blur) {
@@ -51,7 +49,6 @@ export const update = (element, formdata, formName) => {
 
 export const generateData = (formdata, formName) => {
     let dataToSubmit = {};
-
     for (let key in formdata) {
         if (key !== 'confirmPassword') {
             dataToSubmit[key] = formdata[key].value;
@@ -73,19 +70,15 @@ export const isFormValid = (formdata, formName) => {
 export const populateOptionFields = (formdata, arrayData = [], field) => {
     const newArray = [];
     const newFormdata = { ...formdata };
-
     arrayData.forEach(item => {
         newArray.push({ key: item.id, value: item.name });
     });
-    console.log(newFormdata)
-
     newFormdata[field].config.options = newArray;
     return newFormdata;
 }
 
 export const resetFields = (formdata, formName) => {
     const newFormdata = { ...formdata };
-
     for (let key in newFormdata) {
         if (key === 'images') {
             newFormdata[key].value = [];

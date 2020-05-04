@@ -1,28 +1,4 @@
 
-/* mobile and tablet views */
-@media only screen and (max-width: 768px) {
-    .container{
-        margin: 0px 20px!important;
-    }
- header .container{
-     margin: 0;
- }
- .reg_log{
-     display: none;
- }
- .link_container{
-    display: none;
- }
- .link-wrapper .log_reg_btn_wrap{
-     display: none!important;
- }
-
-}
-
-
-
-
-
 /* mobile view end and web view begins */
 header {
     position: fixed;
@@ -94,4 +70,33 @@ header .container {
     line-height: 17px;
     text-align: center;
     letter-spacing: 0.06em;
+}
+.landing_page_menu_bar{
+    display: none;
+}
+
+
+/* mobile and tablet views */
+@media only screen and (max-width: 768px) {
+    .container{
+        margin: 0px 20px!important;
+    }
+ header .container{
+     margin: 0;
+ }
+ .reg_log{
+     display: none;
+ }
+ .link_container{
+    display: none;
+ }
+ .link-wrapper .log_reg_btn_wrap{
+     display: none!important;
+ }
+ .landing_page_menu_bar{
+     display: block;
+     margin-top: 20px;
+     color: #3750B2;
+ }
+
 }

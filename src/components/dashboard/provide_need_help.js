@@ -3,7 +3,7 @@ import './dashboardStyle.css';
 import HelpCard from '../utils/help_card/HelpCard'
 import MyButton from '../utils/button/Button'
 
-class Dashboard extends Component {
+class Help extends Component {
 
     state = {
         isActive: 'provide help'
@@ -69,4 +69,4 @@ class Dashboard extends Component {
     }
 }
 
-export default Dashboard
+export default Help

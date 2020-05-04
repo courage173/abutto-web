@@ -72,14 +72,18 @@
     }
     .right{
         width: 100%;
+        background-image: none;
     }
-    .welcome_wrapper{
-        margin-top: 15px;
-    }
-    .form_container{
-        margin-top: 0;
-    }
-    .option_signin{
-        margin-top: 25px;
-    }
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        font-size: 14px;
+        }
+        ::-moz-placeholder { /* Firefox 19+ */
+        font-size: 14px;
+        }
+        :-ms-input-placeholder { /* IE 10+ */
+        font-size: 14px;
+        }
+        :-moz-placeholder { /* Firefox 18- */
+        font-size: 14px;
+        }
   }

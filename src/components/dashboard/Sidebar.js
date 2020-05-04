@@ -6,7 +6,7 @@ import money from '../../assets/money.svg';
 import support from '../../assets/support.svg'
 import bosky from '../../assets/bosky.png'
 
-class LinkSection extends Component {
+class Sidebar extends Component {
     state = {
         links: [
             {
@@ -123,4 +123,4 @@ class LinkSection extends Component {
     }
 }
 
-export default LinkSection
+export default Sidebar

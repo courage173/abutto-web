@@ -31,7 +31,7 @@
     height: 500px;
 }
 .blue-bg {
-    background-image: url(../../assets/blue.png);
+    background-image: url(../../../assets/blue.png);
     margin-left: 15rem;
     margin-top: 15px;
     height: 10rem;

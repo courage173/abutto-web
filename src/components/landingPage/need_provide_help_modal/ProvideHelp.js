@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import CSSTransition from "react-transition-group/CSSTransition"
+import CSSTransition from "react-transition-group/CSSTransition";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+
 import './needHelpStyle.css';
+
 import { update, generateData, isFormValid } from '../../utils/form/formActions'
 import FormField from '../../utils/form/formfield';
 import MyButton from '../../utils/button/Button';
@@ -121,58 +125,65 @@ class ProvideHelpModal extends Component {
                     exitActive: 'ModalClosed'
                 }}>
                 <div className={modaStyle.join(' ')}>
-                    <div className='need_help_modal_wrapper'>
-                        <FormField
-                            id={'help'}
-                            formdata={this.state.formdata.help}
-                            change={(element) => this.updateForm(element)}
-                            legend='Type of Help'
-                            st={{
-                                display: 'flex', padding: '5px 10px 0px 10px',
-                                justifyContent: 'space-between', fontFamily: 'Montserrat',
-                                color: '#3750B2', fontWeight: '600',
-                                fontSize: '13px',
-                            }}
-                            selStyle='23px'
-                        />
-                        <FormField
-                            id={'quantity'}
-                            formdata={this.state.formdata.quantity}
-                            change={(element) => this.updateForm(element)}
-                            useStyle={true}
-                            st={{ border: 'none', backgroundColor: '#fff', boxShadow: '0px 7px 20px rgba(55, 80, 178, 0.4)' }}
-                            inPutStyle={{ paddingLeft: '10px', width: '92%' }}
-
-                        />
-                        <FormField
-                            id={'location'}
-                            formdata={this.state.formdata.location}
-                            change={(element) => this.updateForm(element)}
-                            useStyle={true}
-                            st={{ border: 'none', backgroundColor: '#fff', boxShadow: '0px 7px 20px rgba(55, 80, 178, 0.4)' }}
-                            inPutStyle={{ paddingLeft: '10px', width: '92%' }}
-
-                        />
-                        <FormField
-                            id={'image'}
-                            formdata={this.state.formdata.image}
-                            change={(element) => this.updateForm(element)}
-                            useStyle={true}
-                            st={{ border: 'none', backgroundColor: '#fff', boxShadow: '0px 7px 20px rgba(55, 80, 178, 0.4)' }}
-                            inPutStyle={{ paddingLeft: '10px', width: '92%' }}
-
-                        />
-
-                        <div className='location_wrapper'>
-                            <MapSection />
-                        </div>
-                        <div style={{ marginTop: '25px', marginBottom: '30px' }}>
-                            <MyButton
-                                type='btn'
-                                title='Provide Help'
+                    <div className='modal_container'>
+                        <FontAwesomeIcon icon={faTimes} style={{ margin: '10px', color: '#755151' }} onClick={this.props.close} />
+                        <div className='need_help_modal_wrapper'>
+                            <FormField
+                                id={'help'}
+                                formdata={this.state.formdata.help}
+                                change={(element) => this.updateForm(element)}
+                                legend='Type of Help'
+                                st={{
+                                    display: 'flex', padding: '5px 10px 0px 10px',
+                                    justifyContent: 'space-between', fontFamily: 'Montserrat',
+                                    color: '#3750B2', fontWeight: '600',
+                                    fontSize: '13px',
+                                }}
+                                selStyle='23px'
+                                ApplyMobileStyle
+                                mobileStyle='mobileStyle'
                             />
-                        </div>
+                            <FormField
+                                id={'quantity'}
+                                formdata={this.state.formdata.quantity}
+                                change={(element) => this.updateForm(element)}
+                                useStyle={true}
+                                st={{ border: 'none', backgroundColor: '#fff', boxShadow: '0px 7px 20px rgba(55, 80, 178, 0.4)' }}
+                                inPutStyle={{ paddingLeft: '10px', width: '92%' }}
+                                ApplyMobileStyle
+                                mobileStyle='mobileStyle'
+                            />
+                            <FormField
+                                id={'location'}
+                                formdata={this.state.formdata.location}
+                                change={(element) => this.updateForm(element)}
+                                useStyle={true}
+                                st={{ border: 'none', backgroundColor: '#fff', boxShadow: '0px 7px 20px rgba(55, 80, 178, 0.4)' }}
+                                inPutStyle={{ paddingLeft: '10px', width: '92%' }}
+                                ApplyMobileStyle
+                                mobileStyle='mobileStyle'
+                            />
+                            <FormField
+                                id={'image'}
+                                formdata={this.state.formdata.image}
+                                change={(element) => this.updateForm(element)}
+                                useStyle={true}
+                                st={{ border: 'none', backgroundColor: '#fff', boxShadow: '0px 7px 20px rgba(55, 80, 178, 0.4)' }}
+                                inPutStyle={{ paddingLeft: '10px', width: '92%' }}
+                                ApplyMobileStyle
+                                mobileStyle='mobileStyle'
+                            />
 
+                            <div className='location_wrapper'>
+                                <MapSection />
+                            </div>
+                            <div style={{ marginTop: '25px', marginBottom: '30px' }}>
+                                <MyButton
+                                    type='btn'
+                                    title='Provide Help'
+                                />
+                            </div>
+                        </div>
 
                     </div >
                 </div>

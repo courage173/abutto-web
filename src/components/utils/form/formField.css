@@ -16,9 +16,7 @@
 }
 
 
-@media (max-width: 768px){
-    
-}
+
 .legend {
     font-family: Roboto;
     font-style: normal;
@@ -46,7 +44,7 @@ input:focus{
 
 .error_label{
     margin: 9px;
-    font-size: 12px;
+    font-size: 14px;
     color: red;
 }
 
@@ -70,3 +68,9 @@ select > option {
     border-radius: 10px;
  }
 
+ @media only screen and (max-width: 768px){
+    input, select, textarea {
+        font-size: 16px;
+      }
+    
+}
