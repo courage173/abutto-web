@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/abutto-web/static/css/main.1cc4a2bf.chunk.css",
+    "main.js": "/abutto-web/static/js/main.6d7bbe74.chunk.js",
+    "main.js.map": "/abutto-web/static/js/main.6d7bbe74.chunk.js.map",
+    "runtime-main.js": "/abutto-web/static/js/runtime-main.b79ec780.js",
+    "runtime-main.js.map": "/abutto-web/static/js/runtime-main.b79ec780.js.map",
+    "static/js/2.b0164c73.chunk.js": "/abutto-web/static/js/2.b0164c73.chunk.js",
+    "static/js/2.b0164c73.chunk.js.map": "/abutto-web/static/js/2.b0164c73.chunk.js.map",
+    "index.html": "/abutto-web/index.html",
+    "precache-manifest.b759db86fe9cdb27187a8586955e407a.js": "/abutto-web/precache-manifest.b759db86fe9cdb27187a8586955e407a.js",
+    "service-worker.js": "/abutto-web/service-worker.js",
+    "static/css/main.1cc4a2bf.chunk.css.map": "/abutto-web/static/css/main.1cc4a2bf.chunk.css.map",
+    "static/js/2.b0164c73.chunk.js.LICENSE.txt": "/abutto-web/static/js/2.b0164c73.chunk.js.LICENSE.txt",
+    "static/media/landingPage.css": "/abutto-web/static/media/curve-rect.957d6ba2.svg",
+    "static/media/profileStyle.css": "/abutto-web/static/media/blue.c6a7628f.png",
+    "static/media/bosky.png": "/abutto-web/static/media/bosky.28835c32.png",
+    "static/media/fb_logo.svg": "/abutto-web/static/media/fb_logo.dfbb5bdd.svg",
+    "static/media/register-login.css": "/abutto-web/static/media/logo_image.321382e5.svg",
+    "static/media/googleplay.svg": "/abutto-web/static/media/googleplay.4bdf157c.svg",
+    "static/media/iphonePic.svg": "/abutto-web/static/media/iphonePic.776d17a3.svg",
+    "static/media/landpage-card.svg": "/abutto-web/static/media/landpage-card.7986b7ef.svg",
+    "static/media/dashboardStyle.css": "/abutto-web/static/media/link_bg.609b17c9.svg",
+    "static/media/money.svg": "/abutto-web/static/media/money.dac6d363.svg",
+    "static/media/super-g.svg": "/abutto-web/static/media/super-g.642005dd.svg",
+    "static/media/support.svg": "/abutto-web/static/media/support.d21bfe9d.svg",
+    "static/media/testimoy_female.svg": "/abutto-web/static/media/testimoy_female.b30aa605.svg",
+    "static/media/testimoy_male.svg": "/abutto-web/static/media/testimoy_male.10d6035e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b79ec780.js",
+    "static/js/2.b0164c73.chunk.js",
+    "static/css/main.1cc4a2bf.chunk.css",
+    "static/js/main.6d7bbe74.chunk.js"
+  ]
+}
