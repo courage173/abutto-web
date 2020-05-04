@@ -115,6 +115,11 @@
     .location_wrapper{
         width: 13rem;
     }
+    .mobileStyle{
+        width: 13rem;
+        height: 38px;
+        margin-top: 16px
+    }
 }
 
 

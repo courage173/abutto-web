@@ -1,4 +1,5 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faEye, faKey, } from '@fortawesome/free-solid-svg-icons'
 import { update, generateData, isFormValid } from '../../utils/form/formActions'
@@ -116,7 +117,9 @@ class Login extends Component {
                                 type='default'
                                 title='Log in'
                                 linkTo='/dashboard'
-                                sty={{ width: '300px', margin: '0px' }}
+                                sty={{ margin: '0px' }}
+                                mobileStyle
+                                styleToApply='login_btn_style'
                             />
                         </div>
                     </form>
@@ -144,7 +147,7 @@ class Login extends Component {
                         />
                     </div>
                     <div className='account_wrapper'>
-                        <p style={{ margin: '0' }}>Don't have an account? <span style={{ cursor: 'pointer' }}>Create Account</span></p>
+                        <p style={{ margin: '0' }}>Don't have an account? <span style={{ cursor: 'pointer' }}><Link to='/register'>Create Account</Link></span></p>
                         <p style={{ margin: '0' }}>Trouble Signing In? <span style={{ cursor: 'pointer' }}>Contact Support</span></p>
                     </div>
                 </div>

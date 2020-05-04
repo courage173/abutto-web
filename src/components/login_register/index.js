@@ -1,8 +1,7 @@
 import React from 'react'
-import Login from './login/Login'
-import './register-login.css'
+import './register-login.css';
 
-const Register_login = () => {
+const Register_login = (props) => {
     return (
         <div className='form_wrapper'>
             <div className='left'>
@@ -12,7 +11,7 @@ const Register_login = () => {
 
             </div>
             <div className='right'>
-                <Login />
+                {props.children}
             </div>
         </div>
 

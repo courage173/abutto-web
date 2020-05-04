@@ -141,6 +141,7 @@ class ProvideHelpModal extends Component {
                                 }}
                                 selStyle='23px'
                                 ApplyMobileStyle
+                                mobileStyle='mobileStyle'
                             />
                             <FormField
                                 id={'quantity'}
@@ -150,6 +151,7 @@ class ProvideHelpModal extends Component {
                                 st={{ border: 'none', backgroundColor: '#fff', boxShadow: '0px 7px 20px rgba(55, 80, 178, 0.4)' }}
                                 inPutStyle={{ paddingLeft: '10px', width: '92%' }}
                                 ApplyMobileStyle
+                                mobileStyle='mobileStyle'
                             />
                             <FormField
                                 id={'location'}
@@ -159,6 +161,7 @@ class ProvideHelpModal extends Component {
                                 st={{ border: 'none', backgroundColor: '#fff', boxShadow: '0px 7px 20px rgba(55, 80, 178, 0.4)' }}
                                 inPutStyle={{ paddingLeft: '10px', width: '92%' }}
                                 ApplyMobileStyle
+                                mobileStyle='mobileStyle'
                             />
                             <FormField
                                 id={'image'}
@@ -168,6 +171,7 @@ class ProvideHelpModal extends Component {
                                 st={{ border: 'none', backgroundColor: '#fff', boxShadow: '0px 7px 20px rgba(55, 80, 178, 0.4)' }}
                                 inPutStyle={{ paddingLeft: '10px', width: '92%' }}
                                 ApplyMobileStyle
+                                mobileStyle='mobileStyle'
                             />
 
                             <div className='location_wrapper'>

@@ -44,7 +44,7 @@ input:focus{
 
 .error_label{
     margin: 9px;
-    font-size: 12px;
+    font-size: 14px;
     color: red;
 }
 
@@ -69,11 +69,6 @@ select > option {
  }
 
  @media only screen and (max-width: 768px){
-    .mobileStyle{
-        width: 13rem;
-        height: 38px;
-        margin-top: 16px
-    }
     input, select, textarea {
         font-size: 16px;
       }

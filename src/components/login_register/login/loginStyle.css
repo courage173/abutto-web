@@ -111,6 +111,9 @@ input[type="checkbox"] + label:before {
   font-size: 22px;
   line-height: 37px
 }
+.login_btn_style{
+  width: 18.5rem;
+}
 .form_container{
     margin-top: 0;
 }
@@ -119,6 +122,5 @@ input[type="checkbox"] + label:before {
 }
 #continue_with_fb_btn{
   margin-top: 14px!important;
-}
-  
+}  
 }
