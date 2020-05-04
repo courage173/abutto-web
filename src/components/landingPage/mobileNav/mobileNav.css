@@ -1,0 +1,31 @@
+.mobile-nav{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 56px;
+    text-align: right;
+    margin-top: 10px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.97);
+    opacity: 0.99;
+    border: 0.5px solid #C4C4C4;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px #E8F5FF;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.mobile-nav a {
+    margin: 5px 0;
+}
+
+.nav-open{
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.nav-close {
+    opacity: 0;
+    transform: translateX(125%)
+}

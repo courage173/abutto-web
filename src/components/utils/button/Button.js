@@ -5,31 +5,33 @@ import './buttonStyle.css'
 
 
 const MyButton = (props) => {
-
+    const { sty, altStyle, font,
+        linkTo, altClass,
+        mobileStyle, styleToApply } = props
+    const styles = ['my_link', mobileStyle ? styleToApply : ' ']
     const buttons = () => {
         let template = '';
-
         switch (props.type) {
             case "default":
                 template = <Link
-                    className={!props.altClass ? 'link_default' : props.altClass}
-                    style={props.altStyle && props.altStyle}
-                    to={props.linkTo}
+                    className={!altClass ? 'link_default' : altClass}
+                    style={altStyle && altStyle}
+                    to={linkTo}
                     onClick={() => console.log()}
 
                 >
-                    {props.font ? props.font : null}
+                    {font ? font : null}
                     {props.title}
                 </Link>
                 break;
             case "btn":
                 template = <div
-                    className={!props.altClass ? 'link_default' : props.altClass}
-                    style={props.altStyle && props.altStyle}
+                    className={!altClass ? 'link_default' : altClass}
+                    style={altStyle && altStyle}
                     onClick={() => props.runAction()}
 
                 >
-                    {props.font ? props.font : null}
+                    {font ? font : null}
                     {props.title}
                 </div>
                 break;
@@ -41,7 +43,7 @@ const MyButton = (props) => {
 
 
     return (
-        <div className="my_link" style={props.sty}>
+        <div className={styles.join(' ')} style={sty}>
             {buttons()}
         </div>
     );
