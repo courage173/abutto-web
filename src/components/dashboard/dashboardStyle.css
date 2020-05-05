@@ -5,8 +5,8 @@
 .dashboard_container{
     padding-top: 50px;
     display: flex;
-    height: 100vh;
     width: 100%;
+    
 }
 
 /* link section styles left-hand*/

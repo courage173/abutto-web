@@ -37,6 +37,7 @@ const Formfield = ({ formdata, change, id, legend,
                                 onChange={(event) => change({ event, id })}
                                 style={inPutStyle}
                             />
+                            {fontIcon2 && fontIcon2}
                             {showError()}
                         </div>
 
@@ -45,7 +46,7 @@ const Formfield = ({ formdata, change, id, legend,
                 break;
             case ('fieldset'):
                 formTemplate = (
-                    <div className={styles.join(' ')}>
+                    <div className={styles.join(' ')} style={st ? st : null}>
                         {formdata.showlabel ?
                             <div className="label_inputs">{formdata.config.label}</div>
                             : null}

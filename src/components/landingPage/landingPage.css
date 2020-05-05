@@ -95,6 +95,17 @@
     justify-content: space-evenly;
     
 }
+@supports (-ms-accelerator: true) {
+    /* Edge only */
+  
+    .card_wrapper {
+      justify-content: space-around;
+      
+    }
+    .form_donation_wrapper{
+        justify-content: space-around;
+    }
+}  
 .card1 {
     text-align: center;
     height: 281px;

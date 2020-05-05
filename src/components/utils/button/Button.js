@@ -7,7 +7,7 @@ import './buttonStyle.css'
 const MyButton = (props) => {
     const { sty, altStyle, font,
         linkTo, altClass,
-        mobileStyle, styleToApply } = props
+        mobileStyle, styleToApply, rightIcon } = props
     const styles = ['my_link', mobileStyle ? styleToApply : ' ']
     const buttons = () => {
         let template = '';
@@ -22,6 +22,7 @@ const MyButton = (props) => {
                 >
                     {font ? font : null}
                     {props.title}
+                    {rightIcon && rightIcon}
                 </Link>
                 break;
             case "btn":
@@ -29,10 +30,10 @@ const MyButton = (props) => {
                     className={!altClass ? 'link_default' : altClass}
                     style={altStyle && altStyle}
                     onClick={() => props.runAction()}
-
                 >
                     {font ? font : null}
                     {props.title}
+                    {rightIcon && rightIcon}
                 </div>
                 break;
             default:
