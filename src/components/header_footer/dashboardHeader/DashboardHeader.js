@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './dashboardHeaderStyle.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBell } from '@fortawesome/free-solid-svg-icons';
@@ -11,7 +12,7 @@ const DashboardHeader = (props) => {
             <div className='dashboard_header_container'>
                 <div style={{ display: 'flex' }}>
                     <FontAwesomeIcon icon={faBars} className='mobile_bars' onClick={props.open} />
-                    <div className='logo' style={{ marginLeft: '10px' }} >Abutto</div>
+                    <div className='logo' style={{ marginLeft: '10px' }} ><Link to='/'>Abutto</Link></div>
                 </div>
                 <div className='dash_header_left_side'>
                     <FontAwesomeIcon icon={faBell} />

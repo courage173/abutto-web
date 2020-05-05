@@ -48,18 +48,18 @@ class Sidebar extends Component {
                 public: false,
                 icon: faSearch
             },
-            {
-                name: 'Settings',
-                linkTo: '/settings',
-                public: false,
-                icon: faCog
-            },
-            {
-                name: 'Support',
-                linkTo: '/support',
-                public: false,
-                icon: support
-            },
+            // {
+            //     name: 'Settings',
+            //     linkTo: '/settings',
+            //     public: false,
+            //     icon: faCog
+            // },
+            // {
+            //     name: 'Support',
+            //     linkTo: '/support',
+            //     public: false,
+            //     icon: support
+            // },
             {
                 name: 'Logout',
                 linkTo: '/logout',
@@ -108,6 +108,7 @@ class Sidebar extends Component {
     }
 
     render() {
+        //creat an array of classes called styles so it will be easy to add more class
         const style = ['links_wrapper', this.props.isMobile ? 'open_links' : 'close_links']
         return (
             <div className={style.join(' ')}>

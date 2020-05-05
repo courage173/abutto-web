@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import './header.css'
@@ -62,6 +62,7 @@ class Header extends Component {
             }
         })
         return list.map((item, i) => {
+            //check if link is register or login 
             if (item.name === "Register" || item.name === "Login") {
                 return <div key={item.name + i} className='reg_reg_btn'><Link className='reg_reg_link' to={item.linkTo} key={i}>{item.name}</Link></div>
             } else {

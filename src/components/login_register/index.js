@@ -1,7 +1,8 @@
 import React from 'react'
 import './register-login.css';
 
-const Register_login = (props) => {
+
+const RegisterLogin = (props) => {
     return (
         <div className='form_wrapper'>
             <div className='left'>
@@ -18,4 +19,4 @@ const Register_login = (props) => {
     )
 }
 
-export default Register_login
+export default RegisterLogin

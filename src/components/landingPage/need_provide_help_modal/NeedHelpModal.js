@@ -82,7 +82,7 @@ class NeedHelpModal extends Component {
         if (element.blur) {
             this.setState({ isFocus: false })
         }
-        const newFormdata = update(element, this.state.formdata, 'donate');
+        const newFormdata = update(element, this.state.formdata, 'needHelp');
         this.setState({
             formError: false,
             formdata: newFormdata

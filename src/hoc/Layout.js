@@ -15,7 +15,9 @@ const DashboardWrap = (props) => {
             <div className='dashboard_wrapper'>
                 <Sidebar isMobile={isMobile} close={() => setMobile(false)} />
                 <div className='dashboard_container'>
-                    {props.children}
+                    <div className='dashboard_right_section'>
+                        {props.children}
+                    </div>
                 </div>
             </div>
 
