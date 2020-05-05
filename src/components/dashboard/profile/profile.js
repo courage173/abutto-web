@@ -1,26 +1,210 @@
 import React, { Component } from 'react';
+
 import './profileStyle.css';
+import bosky from '../../../assets/bosky.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCamera, faEye, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import bosky from '../../../assets/bosky.png';
+
+import { update, generateData, isFormValid } from '../../utils/form/formActions'
+import FormField from '../../utils/form/formfield';
+
+import MyButton from '../../utils/button/Button'
+
+
 
 class Profile extends Component {
+    state = {
+        formError: false,
+        formSuccess: false,
+        isFocus: false,
+        formdata: {
+            firstName: {
+                element: 'input',
+                value: '',
+                config: {
+                    name: 'firstName_input',
+                    type: 'text',
+                },
+                validation: {
+                    required: false,
+                },
+                valid: false,
+                touched: false,
+                validationMessage: ''
+            },
+            lastName: {
+                element: 'input',
+                value: '',
+                config: {
+                    name: 'lastName_input',
+                    type: 'text',
+                },
+                validation: {
+                    required: false,
+                },
+                valid: false,
+                touched: false,
+                validationMessage: ''
+            },
+            email: {
+                element: 'input',
+                value: '',
+                config: {
+                    name: 'email_input',
+                    type: 'email',
+                },
+                validation: {
+                    required: false,
+                    email: true
+                },
+                valid: false,
+                touched: false,
+                validationMessage: ''
+            },
+            phoneNumber: {
+                element: 'input',
+                value: '',
+                config: {
+                    name: 'phone_input',
+                    type: 'text',
+                },
+                validation: {
+                    required: false,
+                },
+                valid: false,
+                touched: false,
+                validationMessage: ''
+            },
+            password: {
+                element: 'input',
+                value: '',
+                config: {
+                    name: 'password_input',
+                    type: 'password',
+                    placeholder: '*********'
+                },
+                validation: {
+                    required: true
+                },
+                valid: false,
+                touched: false,
+                validationMessage: ''
+            },
+            address: {
+                element: 'input',
+                value: '',
+                config: {
+                    name: 'pass_input',
+                    type: 'address',
+                },
+                validation: {
+                    required: false,
+                },
+                valid: false,
+                touched: false,
+                validationMessage: ''
+            }, address: {
+                element: 'input',
+                value: '',
+                config: {
+                    name: 'address_input',
+                    type: 'address',
+                },
+                validation: {
+                    required: false,
+                },
+                valid: false,
+                touched: false,
+                validationMessage: ''
+            },
+            city: {
+                element: 'input',
+                value: '',
+                config: {
+                    name: 'city_input',
+                    type: 'city',
+                },
+                validation: {
+                    required: false,
+                },
+                valid: false,
+                touched: false,
+                validationMessage: ''
+            },
+            state: {
+                element: 'input',
+                value: '',
+                config: {
+                    name: 'pass_input',
+                    type: 'state',
+                },
+                validation: {
+                    required: false,
+                },
+                valid: false,
+                touched: false,
+                validationMessage: ''
+            },
+            gender: {
+                element: 'select',
+                value: '',
+                config: {
+                    name: 'gender_input',
+                    options: [
+                        { key: 1, value: 'Male' },
+                        { key: 2, value: 'Female' },
+                    ]
+                },
+                validation: {
+                    required: false
+                },
+                valid: false,
+                touched: false,
+                validationMessage: '',
+                showlabel: false
+            }
+
+        },
+
+    }
+
+    updateForm = (element) => {
+        if (element.blur) {
+            this.setState({ isFocus: false })
+        }
+        const newFormdata = update(element, this.state.formdata, 'login');
+        this.setState({
+            formError: false,
+            formdata: newFormdata
+        })
+    }
     render() {
         return (
 
             <div className="profile-section">
                 <div className="navs">
                     <div className="edit-profile">Edit Profile</div>
-                    <button className="save">Save <FontAwesomeIcon icon={faArrowRight} className="arrow" /></button>
+                    <div className="save">
+                        <MyButton
+                            type='btn'
+                            title='Save'
+                            rightIcon={<FontAwesomeIcon icon={faArrowRight} className="arrow" />}
+                            altStyle={{
+                                display: 'flex',
+                                justifyContent: 'end',
+                                alignItems: 'center',
+                            }}
+                        />
+                    </div>
                 </div>
 
                 <div className="edit-section container-fluid">
                     <div className="blue-bg">
-                        <button className="photo"><FontAwesomeIcon icon={faCamera} className="camera" />Change Profile</button>
                     </div>
 
                     <div className="user-edit-section">
                         <div className="user-container">
+                            <div className='profile_setting_wrap'><p style={{ margin: '0px' }}>Profile Setting</p></div>
                             <img className="user-icon" src={bosky} alt='profile' style={{
                                 height: '150px', width: '150px', borderRadius:
                                     '100%', objectFit: 'cover'
@@ -32,35 +216,216 @@ class Profile extends Component {
                             <button className="available">Available</button>
                         </div>
                         <div className="input-section">
-                            <p className="acct">Account Setting</p>
+                            <div className="acct_setting_wrapper"><p style={{ margin: '0px' }}>Account Setting</p></div>
                             <hr className="line" />
-                            <div className="form">
-                                <div className="left-input">
-                                    <div className="first">First Name</div><br />
-                                    <input className="input" type="text" placeholder="Jane" /><br />
-                                    <div className="first">Password</div><br />
-                                    <input className="input" type="text" placeholder="********"
-                                    /><span><FontAwesomeIcon icon={faEye} style={{ color: '#DADADA', cursor: 'pointer', marginLeft: '-2rem' }} /></span>
-                                    <div className="first">Email</div><br />
-                                    <input className="input" type="email" placeholder="jandoe@gmail.com" /><br />
-                                </div>
-                                <div className="right-input">
-                                    <div className="first">Last Name</div><br />
-                                    <input className="input" type="text" placeholder="Doe" /><br />
-                                    <div className="first">Gender</div><br />
-                                    <select className="input" name="gender" placeholder="Doe"><option>Male</option><option>Female</option></select>
-                                    <div className="first">Telephone</div><br />
-                                    <input className="input" type="number" placeholder="Doe" /><br />
-                                </div>
+                            <div className="profile_form_wrapper">
+                                <div className="profile-form_top_section">
+                                    <div>
+                                        <div>
+                                            <div className="first">First Name</div><br />
+                                            <FormField
+                                                id={'firstName'}
+                                                formdata={this.state.formdata.firstName}
+                                                change={(element) => this.updateForm(element)}
+                                                useStyle={false}
+                                                inPutStyle={{ background: 'white', boxShadow: 'inset 0 0 0px 9999px white', marginLeft: '15px' }}
+                                                st={{
+                                                    display: 'flex',
+                                                    fontFamily: 'Montserrat',
+                                                    color: '#3750B2', fontWeight: '600',
+                                                    fontSize: '13px',
+                                                    alignItems: 'center',
+                                                    marginTop: '5px'
+                                                }}
 
-                                <div className="address">Address</div>
-                                <input className="address-input" type="text" />
+                                            // ApplyMobileStyle
+                                            // mobileStyle='form_block_mobile'
+                                            />
+                                        </div>
+                                        <div>
+                                            <div className="first">Password</div><br />
+                                            <FormField
+                                                id={'password'}
+                                                formdata={this.state.formdata.password}
+                                                change={(element) => this.updateForm(element)}
+                                                inPutStyle={{ background: 'white', boxShadow: 'inset 0 0 0px 9999px white', marginLeft: '15px' }}
+                                                fontIcon2={<FontAwesomeIcon icon={faEye} style={{ color: '#DADADA', cursor: 'pointer' }} />}
+                                                st={{
+                                                    marginTop: '5px', display: 'flex',
+                                                    justifyContent: 'space-evenly',
+                                                    alignItems: 'center'
+                                                }}
+                                                useStyle={false}
+                                            // ApplyMobileStyle
+                                            // mobileStyle='form_block_mobile'
+                                            />
+                                        </div>
+                                        <div>
+                                            <div className="first">Email</div><br />
+                                            <FormField
+                                                id={'email'}
+                                                formdata={this.state.formdata.email}
+                                                change={(element) => this.updateForm(element)}
+                                                useStyle={false}
+                                                inPutStyle={{ background: 'white', boxShadow: 'inset 0 0 0px 9999px white', marginLeft: '15px' }}
+                                                st={{
+                                                    display: 'flex',
+                                                    fontFamily: 'Montserrat',
+                                                    color: '#3750B2', fontWeight: '600',
+                                                    fontSize: '13px',
+                                                    alignItems: 'center',
+                                                    marginTop: '5px'
+                                                }}
 
-                                <div className="left-input">
-                                    <div className="first">City</div><br />
-                                    <input className="input" type="text" />
+                                            // ApplyMobileStyle
+                                            // mobileStyle='form_block_mobile'
+                                            />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <div className="first">Last Name</div><br />
+                                            <FormField
+                                                id={'lastName'}
+                                                formdata={this.state.formdata.lastName}
+                                                change={(element) => this.updateForm(element)}
+                                                useStyle={false}
+                                                inPutStyle={{ background: 'white', boxShadow: 'inset 0 0 0px 9999px white', marginLeft: '15px' }}
+                                                st={{
+                                                    display: 'flex',
+                                                    fontFamily: 'Montserrat',
+                                                    color: '#3750B2', fontWeight: '600',
+                                                    fontSize: '13px',
+                                                    alignItems: 'center',
+                                                    marginTop: '5px'
+                                                }}
+
+                                            // ApplyMobileStyle
+                                            // mobileStyle='form_block_mobile'
+                                            />
+                                        </div>
+                                        <div>
+                                            <div className="first">Gender</div><br />
+                                            <FormField
+                                                id={'gender'}
+                                                formdata={this.state.formdata.gender}
+                                                change={(element) => this.updateForm(element)}
+                                                legend='Sex'
+                                                st={{
+                                                    display: 'flex', padding: '5px 10px 0px 10px',
+                                                    justifyContent: 'space-between', fontFamily: 'Montserrat',
+                                                    color: 'black', fontWeight: '600',
+                                                    fontSize: '13px',
+                                                }}
+                                                selStyle='23px'
+                                                ApplyMobileStyle
+                                                mobileStyle='genderStyle'
+                                            />
+                                        </div>
+                                        <div>
+                                            <div className="first">Telephone</div><br />
+                                            <FormField
+                                                id={'phoneNumber'}
+                                                formdata={this.state.formdata.phoneNumber}
+                                                change={(element) => this.updateForm(element)}
+                                                useStyle={false}
+                                                inPutStyle={{ background: 'white', boxShadow: 'inset 0 0 0px 9999px white', marginLeft: '15px' }}
+                                                st={{
+                                                    display: 'flex',
+                                                    fontFamily: 'Montserrat',
+                                                    color: '#3750B2', fontWeight: '600',
+                                                    fontSize: '13px',
+                                                    alignItems: 'center',
+                                                    marginTop: '5px'
+                                                }}
+
+                                            // ApplyMobileStyle
+                                            // mobileStyle='form_block_mobile'
+                                            />
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div className='profile_form_btm_section'>
+                                    <div className='address_container'>
+                                        <div className='address_wrapper'>
+                                            <div className="first">Address</div>
+                                            <FormField
+                                                id={'address'}
+                                                formdata={this.state.formdata.address}
+                                                change={(element) => this.updateForm(element)}
+                                                useStyle={false}
+                                                inPutStyle={{ background: 'white', boxShadow: 'inset 0 0 0px 9999px white', marginLeft: '15px' }}
+                                                st={{
+                                                    display: 'flex',
+                                                    fontFamily: 'Montserrat',
+                                                    color: '#3750B2', fontWeight: '600',
+                                                    fontSize: '13px',
+                                                    alignItems: 'center',
+                                                    marginTop: '20px',
+                                                    width: '80%'
+                                                }}
+                                                ApplyMobileStyle
+                                                mobileStyle='address_input_mobile_style'
+                                            />
+                                        </div>
+                                        <div></div>
+                                    </div>
+                                    <div className='city_state_section'>
+                                        <div >
+                                            <div className="first">City</div><br />
+                                            <FormField
+                                                id={'city'}
+                                                formdata={this.state.formdata.city}
+                                                change={(element) => this.updateForm(element)}
+                                                useStyle={false}
+                                                inPutStyle={{ background: 'white', boxShadow: 'inset 0 0 0px 9999px white', marginLeft: '15px' }}
+                                                st={{
+                                                    display: 'flex',
+                                                    fontFamily: 'Montserrat',
+                                                    color: '#3750B2', fontWeight: '600',
+                                                    fontSize: '13px',
+                                                    alignItems: 'center',
+                                                    marginTop: '5px'
+                                                }}
+
+                                            // ApplyMobileStyle
+                                            // mobileStyle='form_block_mobile'
+                                            />
+                                        </div>
+                                        <div>
+                                            <div className="first">State</div><br />
+                                            <FormField
+                                                id={'state'}
+                                                formdata={this.state.formdata.state}
+                                                change={(element) => this.updateForm(element)}
+                                                useStyle={false}
+                                                inPutStyle={{ background: 'white', boxShadow: 'inset 0 0 0px 9999px white', marginLeft: '15px' }}
+                                                st={{
+                                                    display: 'flex',
+                                                    fontFamily: 'Montserrat',
+                                                    color: '#3750B2', fontWeight: '600',
+                                                    fontSize: '13px',
+                                                    alignItems: 'center',
+                                                    marginTop: '5px'
+                                                }}
+
+                                            // ApplyMobileStyle
+                                            // mobileStyle='form_block_mobile'
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                        <div className='save_btn_for_mobile_wrapper'>
+                            <MyButton
+                                type='btn'
+                                title='Save'
+                                rightIcon={<FontAwesomeIcon icon={faArrowRight} className="arrow" />}
+                                mobileStyle
+                                styleToApply='save_btn_for_mobile'
+                            />
                         </div>
                     </div>
                 </div>

@@ -30,7 +30,7 @@ export default class TestimonySlider extends Component {
             slidesToScroll: 0.5,
             centerPadding: "60px",
             className: "center",
-            autoplay: false,
+            autoplay: true,
             speed: 5000,
             autoplaySpeed: 1000,
             cssEase: "linear",

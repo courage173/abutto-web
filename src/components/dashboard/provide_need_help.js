@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './dashboardStyle.css';
 import HelpCard from '../utils/help_card/HelpCard'
 import MyButton from '../utils/button/Button'
@@ -37,7 +37,7 @@ class Help extends Component {
         }]
         return (
 
-            <div className='dashboard_right_section'>
+            <Fragment>
                 <div className='dashboard_card'>
                     <div className={this.state.isActive === 'provide help' ? 'dash_card1' : 'dash_card2'} onClick={() => this.handleHelp('provide help')}>
                         <div style={{ margin: '0', fontWeight: 'bold', fontSize: '18px' }}>Provide Help</div>
@@ -61,10 +61,15 @@ class Help extends Component {
                         title='view all shedule'
                         linkTo='shedule_order'
                         altStyle={{ color: '#3750B2', fontWeight: 'bold', fontSize: '16px' }}
-                        sty={{ background: 'none', border: 'none', width: '162px', padding: '5px', height: '22px', marginTop: '30px' }}
+                        sty={{
+                            background: 'none', border: 'none', width: '162px', padding: '5px',
+                            marginBottom: '50px', height: '22px', marginTop: '30px'
+                        }}
                     />
                 </div>
-            </div>
+            </Fragment>
+
+
         )
     }
 }

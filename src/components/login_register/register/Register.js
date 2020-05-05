@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faEye, faKey, faEnvelope, faMobileAlt } from '@fortawesome/free-solid-svg-icons'
+import { faEye, faKey, faEnvelope, faMobileAlt } from '@fortawesome/free-solid-svg-icons'
 import { update, generateData, isFormValid } from '../../utils/form/formActions'
 import FormField from '../../utils/form/formfield';
 import './registerStyle.css';

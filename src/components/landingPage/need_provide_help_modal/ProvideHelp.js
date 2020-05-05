@@ -98,7 +98,7 @@ class ProvideHelpModal extends Component {
         if (element.blur) {
             this.setState({ isFocus: false })
         }
-        const newFormdata = update(element, this.state.formdata, 'donate');
+        const newFormdata = update(element, this.state.formdata, 'provideHelp');
         this.setState({
             formError: false,
             formdata: newFormdata

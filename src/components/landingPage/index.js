@@ -14,6 +14,12 @@ const LandingPage = () => {
   const [isOpen, handleOpen] = useState(false)
   const [needModal, setModal] = useState(false)
   const [provideHelp, setModalToOpen] = useState(false)
+  /*
+   this function toggles the modal, it takes 2 argument one to change the 
+  modal state value and the other check which modal to toggle. the second
+  check 'close' is so the backdrop can work on any of the modal, hope to
+  refactor modal component to resuable component
+  */
   const handleModal = (p, value) => {
     if (p === 'need' || p === 'close') {
       setModal(value)
