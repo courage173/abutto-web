@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { withRouter, NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserCircle, faSearch, faCog, faTh } from '@fortawesome/free-solid-svg-icons';
 import money from '../../assets/money.svg';
@@ -109,7 +109,9 @@ class Sidebar extends Component {
             }
         })
     }
-
+    handleProfile() {
+        this.props.history.push('/profile')
+    }
     render() {
         //creat an array of classes called styles so it will be easy to add more class
         const style = ['links_wrapper', this.props.isMobile ? 'open_links' : 'close_links']
@@ -120,11 +122,11 @@ class Sidebar extends Component {
                         <img src={bosky} alt='profile pics' style={{ height: '109px', width: '108px', borderRadius: '50%', objectFit: 'cover' }} />
                     </div>
                 </div>
-                <div className='profile_name'>Jane Doe</div>
+                <div className='profile_name' style={{ cursor: 'pointer' }} onClick={() => this.handleProfile()}>Jane Doe</div>
                 {this.displayLinks()}
             </div>
         )
     }
 }
 
-export default Sidebar
+export default withRouter(Sidebar)

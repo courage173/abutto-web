@@ -116,7 +116,7 @@ class Login extends Component {
                             <MyButton
                                 type='default'
                                 title='Log in'
-                                linkTo='/dashboard'
+                                linkTo='/provide_help'
                                 sty={{ margin: '0px' }}
                                 mobileStyle
                                 styleToApply='login_btn_style'
