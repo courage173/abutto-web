@@ -105,7 +105,7 @@ class Login extends Component {
                                 useStyle={true}
                             />
                             <div className='check_wrapper'>
-                                <div>
+                                <div className='login'>
                                     <input id='checkbox' type='checkbox' style={{ display: ' contents' }} />
                                     <label htmlFor='checkbox' style={{ color: 'rgba(0, 0, 0, 0.8)' }}>Remeber me</label>
                                 </div>

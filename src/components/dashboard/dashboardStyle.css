@@ -9,7 +9,9 @@
     
 }
 
-/* link section styles left-hand*/
+/************************************************/
+/*      link section styles left-hand           */
+/************************************************/
 .profile_image {
     margin: 43px 26px;
 }
@@ -47,6 +49,10 @@
     box-shadow: 8px 0px 15px rgba(55, 80, 178, 0.6);
     align-items: center;
 }
+a {
+    text-decoration: none;
+    color: #3750B2;
+}
 .profile_pic_container{
     height: 185px;
     width: 100%;
@@ -78,7 +84,9 @@
     color: hsl(0, 7%, 44%)
 }
 
-/* right section side styles */
+/*****************************************/
+/*        right section side styles     */
+/***************************************/
 .dashboard_right_section {
     margin-left: 255px;
     margin-right: 55px;

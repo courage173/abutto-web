@@ -310,7 +310,9 @@ color: #3750B2
         color: rgba(0, 0, 0, 0.8);
     }
     .top_content_wrapper{
-        background: url('../../assets/curve-rect.svg');
+        background: radial-gradient(90% 75% at top, transparent 115%,white 40%);
+        /* background-image: -webkit-gradient(radial, center center, 0%, center center, 75%, color-stop(115%, transparent), color-stop(40%,black)); */
+        background: -webkit-gradient( radial, 90% , 75% , top, 115%[ at top] ) white;
         background-repeat: no-repeat;
         background-position: bottom;
         background-size: contain;

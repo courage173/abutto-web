@@ -38,7 +38,7 @@ const HelpCard = (props) => {
     }
     const displayMobileCard = () => {
         return props.data.map((item, i) => (
-            <div className='mobile_help_wrapper'>
+            <div className='mobile_help_wrapper' key={i + item.date}>
                 <div className='mobile_help_container'>
                     <div className='mobile_card_title'>
                         <p>DATE</p>

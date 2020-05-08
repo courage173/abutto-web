@@ -25,7 +25,8 @@ export const validate = (element, formdata = []) => {
     return error
 }
 
-export const update = (element, formdata, formName) => {
+export const update = (element, formdata, formName, check) => {
+
 
     const newFormdata = {
         ...formdata
@@ -33,6 +34,9 @@ export const update = (element, formdata, formName) => {
     const newElement = {
         ...newFormdata[element.id]
     }
+
+
+    newElement.checked = element.event.target.checked;
     newElement.value = element.event.target.value;
 
     if (element.blur) {
@@ -43,7 +47,6 @@ export const update = (element, formdata, formName) => {
 
     newElement.touched = element.blur;
     newFormdata[element.id] = newElement;
-
     return newFormdata;
 }
 
@@ -75,6 +78,10 @@ export const populateOptionFields = (formdata, arrayData = [], field) => {
     });
     newFormdata[field].config.options = newArray;
     return newFormdata;
+}
+
+export const updateCheckboxFields = (formData, field) => {
+
 }
 
 export const resetFields = (formdata, formName) => {

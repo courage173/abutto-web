@@ -119,6 +119,30 @@ const Formfield = ({ formdata, change, id, legend,
                     </div>
                 )
                 break;
+            case ('toggle'):
+                formTemplate = (
+                    <>
+                        <input
+                            checked={formdata.checked}
+                            name={formdata.name}
+                            value={formdata.checked}
+                            onChange={(event) => change({ event, id })}
+                            {...formdata.config}
+                            className="react-switch-checkbox"
+                            id={id}
+                            type="checkbox"
+                        />
+                        <label
+                            style={{ background: formdata.checked && '#fff' }}
+                            className="react-switch-label"
+                            htmlFor={id}
+                        >
+                            <span className='react-switch-button' />
+                        </label>
+                        {showError()}
+                    </>
+                )
+                break;
             case ('checkbox'):
                 formTemplate = (
                     <div className={styles.join(' ')}>
