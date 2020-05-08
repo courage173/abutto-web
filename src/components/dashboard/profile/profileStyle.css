@@ -3,6 +3,7 @@
 } */
 .navs {
     display: flex;
+    justify-content: space-between;
 }
 .edit-profile {
     font-family: Montserrat;
@@ -10,7 +11,6 @@
     font-size: 15px;
 }
 .save {
-    margin-left: 54rem;
     background-color: #3750B2;
     box-shadow: 0px 7px 20px rgba(55, 80, 178, 0.4);
     border-radius: 5px;
@@ -146,6 +146,7 @@
 }
 .profile_form_wrapper {
     display: flex;
+    flex-flow: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -153,10 +154,11 @@
 .genderStyle{
     margin-top: 0px!important;
     box-shadow: 0px 7px 20px rgba(218, 218, 218, 0.5)!important;
-    border: 1px solid #C4C4C4;
+    border: 1px solid #C4C4C4!important;
 }
 .profile-form_top_section{
     display: flex;
+    flex-flow: wrap;
     width: 100%;
     justify-content: space-evenly;
 }
@@ -175,6 +177,7 @@
 }
 .city_state_section{
     display: flex;
+    flex-flow: wrap;
     width: 100%;
     justify-content: space-evenly;
     margin-top: 11px
@@ -209,6 +212,18 @@
     .user-edit-section{
         flex-direction: column;
     }
+    .user-icon{
+        height: 250px!important;
+        width: 250px!important;
+    }
+    .profile_setting_wrap{
+        margin-top: -2px;
+        margin-bottom: 24px;
+    }
+    .foto-edit{
+        margin-top: 14rem;
+    }
+
  .user-container{
      margin-left: 0;
      flex: none;

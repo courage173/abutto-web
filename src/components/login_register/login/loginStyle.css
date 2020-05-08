@@ -48,10 +48,10 @@
 
 }
 
-input[type="checkbox"] {
+.login input[type="checkbox"] {
     visibility: hidden;
   }
-input[type="checkbox"] + label:before {
+  .login input[type="checkbox"] + label:before {
     border: 1px solid #333;
     content: "\00a0";
     display: inline-block;
@@ -62,14 +62,14 @@ input[type="checkbox"] + label:before {
     vertical-align: top;
     width: 16px;
   }
-  input[type="checkbox"]:checked + label:before {
+  .login input[type="checkbox"]:checked + label:before {
     background: #3750B2;
     border-radius: 2px;
     color: #fff;
     content: "\2713";
     text-align: center;
   }
-  input[type="checkbox"]:checked + label:after {
+  .login input[type="checkbox"]:checked + label:after {
     font-weight: bold;
   }
   

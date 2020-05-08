@@ -1,0 +1,156 @@
+/* .settings_wrapper{
+
+} */
+
+.settings_container{
+    margin: 0px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.setting_top_container{
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.act_settings_wrap{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+    margin-top: 2rem;
+}
+
+.settings_top_btm_wrapper{
+    display: flex;
+    align-items: flex-end;
+    flex-flow: wrap;
+    margin-top: 2rem;
+    margin-bottom: 50px;
+}
+.settings_top_btm_container {
+    margin-right: 2rem;
+}
+
+.setting_top_wrapper{
+    width: 91%
+}
+.setting_phone_input_wrap{
+    margin-right: 3rem;;
+}
+
+.setting_input_title{
+    font-family: Montserrat;
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 16px;
+}
+.setting_number_input_wrap{
+    display: flex;
+    align-items: center;
+}
+
+.setting_bottom_container{
+    font-family: Montserrat;
+    color: #000000;
+    font-style: normal;
+    margin-top: 2rem;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.settings_btm_wrapper{
+    width: 91%;
+    margin-bottom: 3rem;
+}
+.settings_notif_text{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 2rem;
+}
+.settings_activity_noti{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px
+}
+.settings_email_cont{
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.toggle_btn_title{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 14px;
+    color: #000000;
+    margin-right: 3rem;
+}
+.toggle_btn_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+
+/*****************************************/
+/*          Mobile view Styles          */
+/****************************************/
+@media only screen and (max-width: 559px){
+    .settings_container{
+        margin: 0;
+        align-items: center;
+    }
+    .setting_top_container{
+        width: 95%;
+    }
+    .settings_top_btm_container{
+        margin-right: 0px;
+    }
+    .setting_top_wrapper{  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .act_settings_wrap{
+        font-size: 16px;
+        line-height: 18px
+    }
+    .setting_number_input_wrap{
+        flex-direction: column;
+    }
+    .setting_phone_input_wrap{
+        margin: 0px;
+    }
+    .setting_phone_numb_btn{
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+    .settings_btn_mob{
+        margin-right: 0px;
+        box-shadow: none;
+    }
+    .settings_input_phone_mob{
+        width: 100%!important;
+    }
+    .settings_top_btm_wrapper{
+        justify-content: center;
+    }
+    .settings_btn2{
+        width: 300px;
+        margin-top: 1.5rem;
+    }
+    .setting_bottom_container{
+        width: 95%;
+        margin-bottom: 1rem;
+    }
+}

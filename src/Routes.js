@@ -3,10 +3,12 @@ import { Switch, Route } from 'react-router-dom';
 import Layout from './hoc/Layout'
 import LandingPage from './components/landingPage'
 import RegisterLogin from './components/login_register';
-import Help from './components/dashboard/provide_need_help';
+import NeedHelp from './components/dashboard/provide_need_help/NeedHelp';
+import ProvideHelp from './components/dashboard/provide_need_help/ProvideHelp';
 import Profile from './components/dashboard/profile/profile'
 import Login from './components/login_register/login/Login';
-import Register from './components/login_register/register/Register'
+import Register from './components/login_register/register/Register';
+import Setting from './components/dashboard/setting/Setting'
 
 const Routes = () => {
     return (
@@ -23,8 +25,10 @@ const Routes = () => {
                 </RegisterLogin>
             </Route>
             <Layout>
-                <Route exact path="/dashboard" component={Help} />
+                <Route exact path="/need_help" component={NeedHelp} />
+                <Route exact path="/provide_help" component={ProvideHelp} />
                 <Route path="/profile" exact component={Profile} />
+                <Route path="/settings" exact component={Setting} />
             </Layout>
         </Switch>
 
