@@ -104,15 +104,15 @@ class MiddleSection extends Component {
                     />
                 </div>
                 <div className='card_wrapper'>
-                    <div className='card1' onClick={() => this.props.click('provide', true)}>
+                    <div className={this.props.provideModal ? 'card1' : 'card2'} onClick={() => this.props.click('provide', true)}>
                         <img src={CardImage} alt='money bag' style={{ height: '170px', width: '200px' }} />
                         <h5>Provide Help</h5>
-                        <p className='ptag1'>Reach out to others in need of help</p>
+                        <p className={this.props.provideModal ? 'ptag1' : 'ptag2'}>Reach out to others in need of help</p>
                     </div>
-                    <div className='card2' onClick={() => this.props.click('need', true)}>
+                    <div className={this.props.needModal ? 'card1' : 'card2'} onClick={() => this.props.click('need', true)}>
                         <img src={CardImage} alt='money bag' style={{ height: '100px', marginTop: '20px' }} />
                         <h5>Need Help</h5>
-                        <p className='ptag2'>in need of help</p>
+                        <p className={this.props.needModal ? 'ptag1' : 'ptag2'}>in need of help</p>
                     </div>
                     <div className='card2'>
                         <img src={CardImage} alt='money bag' style={{ height: '100px', marginTop: '20px' }} />

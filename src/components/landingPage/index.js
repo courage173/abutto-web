@@ -48,6 +48,8 @@ const LandingPage = () => {
           <TopSection isOpen={isOpen} />
           <MiddleSection
             click={(m, value) => handleModal(m, value)}
+            provideModal={provideHelp}
+            needModal={needModal}
           />
           <BottomSection />
         </div>

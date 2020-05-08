@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react';
-import './dashboardStyle.css';
-import HelpCard from '../utils/help_card/HelpCard'
-import MyButton from '../utils/button/Button'
+import { withRouter } from 'react-router-dom';
+import './../dashboardStyle.css';
+import HelpCard from '../../utils/help_card/HelpCard'
+import MyButton from '../../utils/button/Button'
 
 class Help extends Component {
 
@@ -9,41 +10,22 @@ class Help extends Component {
         isActive: 'provide help'
     }
 
-    handleHelp(help) {
+    handleHelp(help, link) {
         this.setState({ isActive: help })
+        this.props.history.push(`/${link}`)
+        console.log(help, link)
     }
 
     render() {
-        const helpData = [{
-            date: 'Today, 12 April, 2020',
-            type: 'Foodstuff Rice',
-            quantity: '2 Mudu',
-            location: '0.2mm away '
-        }, {
-            date: 'Today, 12 April, 2020',
-            type: 'Foodstuff Rice',
-            quantity: '2 Mudu',
-            location: '0.2mm away'
-        }, {
-            date: 'Today, 12 April, 2020',
-            type: 'Foodstuff Rice',
-            quantity: '2 Mudu',
-            location: '0.2mm away'
-        }, {
-            date: 'Today, 12 April, 2020',
-            type: 'Foodstuff fufu',
-            quantity: '2 bag',
-            location: '0.9mm away'
-        }]
         return (
 
             <Fragment>
                 <div className='dashboard_card'>
-                    <div className={this.state.isActive === 'provide help' ? 'dash_card1' : 'dash_card2'} onClick={() => this.handleHelp('provide help')}>
+                    <div className={this.props.help === 'provide' ? 'dash_card1' : 'dash_card2'} onClick={() => this.handleHelp('provide help', 'provide_help')}>
                         <div style={{ margin: '0', fontWeight: 'bold', fontSize: '18px' }}>Provide Help</div>
                         <div id='btn_provide_text2' style={{ margin: '0', fontSize: '14px' }}>Reach out to others in<br /> need of help</div>
                     </div>
-                    <div className={this.state.isActive === 'need help' ? 'dash_card1' : 'dash_card2'} onClick={() => this.handleHelp('need help')}>
+                    <div className={this.props.help === 'need' ? 'dash_card1' : 'dash_card2'} onClick={() => this.handleHelp('need help', 'need_help')}>
                         <div style={{ margin: '0', fontWeight: 'bold', fontSize: '18px' }}>Need Help</div>
                         <div style={{ margin: '0', fontSize: '14px' }}>In need of help</div>
                     </div>
@@ -53,7 +35,7 @@ class Help extends Component {
                     <hr />
                 </div>
                 <div>
-                    <HelpCard data={helpData} />
+                    <HelpCard data={this.props.helpData} />
                 </div>
                 <div className='view_schedule_btn'>
                     <MyButton
@@ -74,4 +56,4 @@ class Help extends Component {
     }
 }
 
-export default Help
+export default withRouter(Help)

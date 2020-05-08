@@ -29,10 +29,7 @@
     color: #3750B2;
 }
 
-a {
-    text-decoration: none;
-    color: #3750B2;
-}
+
 
 @media only screen and (max-width: 768px) {
     .home_service_wrapper{

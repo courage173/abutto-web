@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserCircle, faSearch, faCog, faTh } from '@fortawesome/free-solid-svg-icons';
 import money from '../../assets/money.svg';
@@ -42,18 +42,18 @@ class Sidebar extends Component {
                 name: 'OTHERS',
                 public: false
             },
-            {
-                name: 'Search',
-                linkTo: '/search',
-                public: false,
-                icon: faSearch
-            },
             // {
-            //     name: 'Settings',
-            //     linkTo: '/settings',
+            //     name: 'Search',
+            //     linkTo: '/search',
             //     public: false,
-            //     icon: faCog
+            //     icon: faSearch
             // },
+            {
+                name: 'Settings',
+                linkTo: '/settings',
+                public: false,
+                icon: faCog
+            },
             // {
             //     name: 'Support',
             //     linkTo: '/support',
@@ -76,7 +76,9 @@ class Sidebar extends Component {
             if (link.name === 'Dashboard') {
                 return (
                     <div key={link.name + i} className='dashboardLink'>
-                        <Link onClick={this.props.close} to={link.linkTo} key={i}><FontAwesomeIcon icon={faTh} style={{ color: 'rgba(55, 80, 178, 0.8)', marginRight: '10px' }} />{link.name}</Link>
+                        <div onClick={this.props.close} to={link.linkTo}
+                            key={i}><FontAwesomeIcon icon={faTh}
+                                style={{ color: 'rgba(55, 80, 178, 0.8)', marginRight: '10px' }} />{link.name}</div>
                     </div>
                 )
             }
@@ -89,19 +91,20 @@ class Sidebar extends Component {
             }
             else if (link.name === 'Logout') {
                 return (
-                    <Link onClick={this.props.close} id={link.id && link.id} className='links' to={link.linkTo} key={link.name + i} style={{ fontSize: '16px' }}>
+                    <NavLink activeStyle={{ color: "#3750B2" }} onClick={this.props.close}
+                        id={link.id && link.id} className='links' to={link.linkTo} key={link.name + i} style={{ fontSize: '16px' }}>
                         {link.name}
-                    </Link>
+                    </NavLink>
                 )
 
             }
             else {
                 return (
-                    <Link onClick={this.props.close} id={link.id && link.id} className='links' to={link.linkTo} key={link.name + i} style={{ marginTop: '18px', fontSize: '16px' }}>
+                    <NavLink activeStyle={{ color: "#3750B2" }} onClick={this.props.close} id={link.id && link.id} className='links' to={link.linkTo} key={link.name + i} style={{ marginTop: '18px', fontSize: '16px' }}>
                         {link.icon ? link.name === 'Provide Help' || link.name === 'Need Help' || link.name === 'Support' ?
                             <img src={link.icon} alt='icon' style={{ marginRight: '15px' }} /> :
                             <FontAwesomeIcon icon={link.icon} style={{ marginRight: '20px', color: '#3750B2' }} /> : null} {link.name}
-                    </Link>
+                    </NavLink>
                 )
             }
         })
