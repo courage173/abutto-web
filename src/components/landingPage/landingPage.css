@@ -358,9 +358,12 @@ color: #3750B2
     }
     .intro-section h4{
         margin: 0;
+        font-size: 32px;
+        line-height: 40px
     }
     .intro-section p{
-        padding: 5px
+        padding: 5px;
+        font-size: 14px;
     }
     .card_wrapper{
         flex-direction: column;
