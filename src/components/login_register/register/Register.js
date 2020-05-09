@@ -16,7 +16,6 @@ class Register extends Component {
     state = {
         formError: false,
         formSuccess: false,
-        isFocus: false,
         formdata: {
             username: {
                 element: 'fieldset',
@@ -101,9 +100,6 @@ class Register extends Component {
     }
 
     updateForm = (element) => {
-        if (element.blur) {
-            this.setState({ isFocus: false })
-        }
         const newFormdata = update(element, this.state.formdata, 'login');
         this.setState({
             formError: false,
@@ -146,7 +142,7 @@ class Register extends Component {
                             change={(element) => this.updateForm(element)}
                             fontIcon={<FontAwesomeIcon icon={faEnvelope} style={{ margin: '0 10px 0 5px', color: '#3750B2' }} />}
                             useStyle={false}
-                            inPutStyle={{ background: 'rgb(232, 245, 255)' }}
+                            inPutStyle={{ background: 'rgb(232, 245, 255)', boxShadow: 'rgb(232, 245, 255) 0px 0px 0px 9999px inset' }}
                             st={{
                                 display: 'flex',
                                 fontFamily: 'Montserrat',
@@ -155,8 +151,6 @@ class Register extends Component {
                                 alignItems: 'center',
                                 marginTop: '25px'
                             }}
-                            setFocus={this.focus}
-                            isFocus={this.state.isFocus}
                             ApplyMobileStyle
                             mobileStyle='form_block_mobile'
                         />
@@ -166,7 +160,7 @@ class Register extends Component {
                             change={(element) => this.updateForm(element)}
                             fontIcon={<FontAwesomeIcon icon={faMobileAlt} style={{ margin: '0 10px 0 5px', color: '#3750B2' }} />}
                             useStyle={false}
-                            inPutStyle={{ background: 'rgb(232, 245, 255)' }}
+                            inPutStyle={{ background: 'rgb(232, 245, 255)', boxShadow: 'rgb(232, 245, 255) 0px 0px 0px 9999px inset' }}
                             st={{
                                 display: 'flex',
                                 fontFamily: 'Montserrat',
@@ -184,7 +178,7 @@ class Register extends Component {
                             change={(element) => this.updateForm(element)}
                             fontIcon={<FontAwesomeIcon icon={faKey} style={{ color: '#3750B2' }} />}
                             fontIcon2={<FontAwesomeIcon icon={faEye} style={{ color: '#DADADA', cursor: 'pointer' }} />}
-                            st={{ border: '2px solid #3750B2' }}
+                            inPutStyle={{ background: 'rgb(232, 245, 255)', boxShadow: 'rgb(232, 245, 255) 0px 0px 0px 9999px inset' }}
                             useStyle={true}
                             ApplyMobileStyle
                             mobileStyle='form_block_mobile'
@@ -195,7 +189,7 @@ class Register extends Component {
                             change={(element) => this.updateForm(element)}
                             fontIcon={<FontAwesomeIcon icon={faKey} style={{ color: '#3750B2' }} />}
                             fontIcon2={<FontAwesomeIcon icon={faEye} style={{ color: '#DADADA', cursor: 'pointer' }} />}
-                            st={{ border: '2px solid #3750B2' }}
+                            inPutStyle={{ background: 'rgb(232, 245, 255)', boxShadow: 'rgb(232, 245, 255) 0px 0px 0px 9999px inset' }}
                             useStyle={true}
                             ApplyMobileStyle
                             mobileStyle='form_block_mobile'

@@ -147,6 +147,10 @@ a {
 border: 1px solid #C4C4C4;
 
 }
+
+/*************************************/
+/*            mobile styles           */
+/**************************************/          
 @media only screen and (max-width: 768px) {
     .close_links{
         transform: translateX(-110%);
