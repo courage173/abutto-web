@@ -16,7 +16,6 @@ class Login extends Component {
     state = {
         formError: false,
         formSuccess: false,
-        isFocus: false,
         formdata: {
             email: {
                 element: 'fieldset',
@@ -55,9 +54,6 @@ class Login extends Component {
     }
 
     updateForm = (element) => {
-        if (element.blur) {
-            this.setState({ isFocus: false })
-        }
         const newFormdata = update(element, this.state.formdata, 'login');
         this.setState({
             formError: false,
@@ -85,9 +81,7 @@ class Login extends Component {
                                 legend='username'
                                 fontIcon={<FontAwesomeIcon icon={faUser} style={{ margin: '0 10px 0 5px', color: '#3750B2' }} />}
                                 useStyle={false}
-                                st={{ border: '2px solid #3750B2' }}
-                                setFocus={this.focus}
-                                isFocus={this.state.isFocus}
+                                inPutStyle={{ background: 'rgb(232, 245, 255)', boxShadow: 'rgb(232, 245, 255) 0px 0px 0px 9999px inset' }}
                             />
                         </div>
                         <div className="block">
@@ -98,11 +92,8 @@ class Login extends Component {
                                 legend='password'
                                 fontIcon={<FontAwesomeIcon icon={faKey} style={{ color: '#3750B2' }} />}
                                 fontIcon2={<FontAwesomeIcon icon={faEye} style={{ color: '#DADADA', cursor: 'pointer' }} />}
-                                setFocus={this.focus}
-                                isFocus={this.state.isFocus}
-                                st={{ border: '2px solid #3750B2' }}
-
                                 useStyle={true}
+                                inPutStyle={{ background: 'rgb(232, 245, 255)', boxShadow: 'rgb(232, 245, 255) 0px 0px 0px 9999px inset' }}
                             />
                             <div className='check_wrapper'>
                                 <div className='login'>

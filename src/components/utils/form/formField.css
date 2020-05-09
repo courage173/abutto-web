@@ -68,6 +68,17 @@ select > option {
     border-radius: 10px;
  }
 
+
+ .k{
+   /* override default browser outline */
+ color: #6C63FF;
+   outline: 0;
+   /* apply other styles */
+ 
+   border: 2px solid #3750B2;
+ }
+ 
+
  @media only screen and (max-width: 768px){
     input, select, textarea {
         font-size: 16px;
@@ -111,11 +122,6 @@ select > option {
     box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
   }
   
-  .switch {
-    left: calc(100% - 2px)!important;
-    transform: translateX(-100%);
-  }
-
   .react-switch-checkbox:checked + .react-switch-label .react-switch-button {
     left: calc(100% - 2px);
     transform: translateX(-100%);

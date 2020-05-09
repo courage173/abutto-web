@@ -85,7 +85,8 @@ class Setting extends Component {
                 validation: {
                     required: false,
                 },
-                validationMessage: ''
+                validationMessage: '',
+                touched: false,
             },
             providHelpNotification: {
                 element: 'toggle',
@@ -98,6 +99,7 @@ class Setting extends Component {
                 },
                 validationMessage: '',
                 name: 'provide_input',
+                touched: false,
             },
             accept: {
                 element: 'toggle',
@@ -109,7 +111,8 @@ class Setting extends Component {
                 validation: {
                     required: false,
                 },
-                validationMessage: ''
+                validationMessage: '',
+                touched: false,
             },
         }
     }

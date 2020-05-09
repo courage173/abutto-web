@@ -6,14 +6,8 @@ import MyButton from '../../utils/button/Button'
 
 class Help extends Component {
 
-    state = {
-        isActive: 'provide help'
-    }
-
-    handleHelp(help, link) {
-        this.setState({ isActive: help })
+    handleHelp(link) {
         this.props.history.push(`/${link}`)
-        console.log(help, link)
     }
 
     render() {
