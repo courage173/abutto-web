@@ -5,22 +5,22 @@ function NeedHelp() {
     const helpData = [{
         date: 'Today, 12 April, 2020',
         type: 'Foodstuff Rice',
-        quantity: '2 Mudu',
+        quantity: '2',
         location: '0.2mm away '
     }, {
         date: 'Today, 12 April, 2020',
         type: 'Foodstuff Rice',
-        quantity: '2 Mudu',
+        quantity: '4',
         location: '0.2mm away'
     }, {
         date: 'Today, 12 April, 2020',
         type: 'Foodstuff Rice',
-        quantity: '2 Mudu',
+        quantity: '1',
         location: '0.2mm away'
     }, {
         date: 'Today, 12 April, 2020',
         type: 'Foodstuff fufu',
-        quantity: '2 bag',
+        quantity: '3',
         location: '0.9mm away'
     }]
     return (

@@ -3,7 +3,6 @@ import './helpCard.css'
 import MyButton from '../../utils/button/Button'
 
 const HelpCard = (props) => {
-
     const displayCard = () => {
         return props.data.map((item, i) => (
             <tbody key={i}>
@@ -43,7 +42,7 @@ const HelpCard = (props) => {
                     <div className='mobile_card_title'>
                         <p>DATE</p>
                         <p>TYPE OF ORDER</p>
-                        <p>QUANTITY</p>
+                        <p> {props.type === 'provide' ? 'QUANTITY' : 'No. of PERSONS'} </p>
                         <p>LOCATION</p>
 
                     </div>
@@ -80,7 +79,7 @@ const HelpCard = (props) => {
                     <tr>
                         <th>DATE</th>
                         <th>TYPE OF ORDER</th>
-                        <th>QUANTITY</th>
+                        <th>{props.type === 'provide' ? 'QUANTITY' : 'No. of PERSONS'}</th>
                         <th>LOCATION</th>
                         <th></th>
                         <th></th>
