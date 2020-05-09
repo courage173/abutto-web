@@ -15,11 +15,11 @@ class Help extends Component {
 
             <Fragment>
                 <div className='dashboard_card'>
-                    <div className={this.props.help === 'provide' ? 'dash_card1' : 'dash_card2'} onClick={() => this.handleHelp('provide help', 'provide_help')}>
+                    <div className={this.props.help === 'provide' ? 'dash_card1' : 'dash_card2'} onClick={() => this.handleHelp('provide_help')}>
                         <div style={{ margin: '0', fontWeight: 'bold', fontSize: '18px' }}>Provide Help</div>
                         <div id='btn_provide_text2' style={{ margin: '0', fontSize: '14px' }}>Reach out to others in<br /> need of help</div>
                     </div>
-                    <div className={this.props.help === 'need' ? 'dash_card1' : 'dash_card2'} onClick={() => this.handleHelp('need help', 'need_help')}>
+                    <div className={this.props.help === 'need' ? 'dash_card1' : 'dash_card2'} onClick={() => this.handleHelp('need_help')}>
                         <div style={{ margin: '0', fontWeight: 'bold', fontSize: '18px' }}>Need Help</div>
                         <div style={{ margin: '0', fontSize: '14px' }}>In need of help</div>
                     </div>
@@ -29,7 +29,7 @@ class Help extends Component {
                     <hr />
                 </div>
                 <div>
-                    <HelpCard data={this.props.helpData} />
+                    <HelpCard data={this.props.helpData} type={this.props.help} />
                 </div>
                 <div className='view_schedule_btn'>
                     <MyButton
