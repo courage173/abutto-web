@@ -222,7 +222,7 @@ class Profile extends Component {
                                 <div className="profile-form_top_section">
                                     <div>
                                         <div>
-                                            <div className="first">First Name</div><br />
+                                            <div className="first">First Name</div>
                                             <FormField
                                                 id={'firstName'}
                                                 formdata={this.state.formdata.firstName}
@@ -230,7 +230,7 @@ class Profile extends Component {
                                                 useStyle={false}
                                                 inPutStyle={{ background: 'white', boxShadow: 'inset 0 0 0px 9999px white', marginLeft: '15px' }}
                                                 st={{
-                                                    display: 'flex',
+                                                    marginBottom: '21px',
                                                     fontFamily: 'Montserrat',
                                                     color: '#3750B2', fontWeight: '600',
                                                     fontSize: '13px',
@@ -243,7 +243,7 @@ class Profile extends Component {
                                             />
                                         </div>
                                         <div>
-                                            <div className="first">Password</div><br />
+                                            <div className="first">Password</div>
                                             <FormField
                                                 id={'password'}
                                                 formdata={this.state.formdata.password}
@@ -251,7 +251,8 @@ class Profile extends Component {
                                                 inPutStyle={{ background: 'white', boxShadow: 'inset 0 0 0px 9999px white', marginLeft: '15px' }}
                                                 fontIcon2={<FontAwesomeIcon icon={faEye} style={{ color: '#DADADA', cursor: 'pointer' }} />}
                                                 st={{
-                                                    marginTop: '5px', display: 'flex',
+                                                    marginBottom: '21px',
+                                                    marginTop: '5px',
                                                     justifyContent: 'space-evenly',
                                                     alignItems: 'center'
                                                 }}
@@ -261,7 +262,7 @@ class Profile extends Component {
                                             />
                                         </div>
                                         <div>
-                                            <div className="first">Email</div><br />
+                                            <div className="first">Email</div>
                                             <FormField
                                                 id={'email'}
                                                 formdata={this.state.formdata.email}
@@ -269,7 +270,7 @@ class Profile extends Component {
                                                 useStyle={false}
                                                 inPutStyle={{ background: 'white', boxShadow: 'inset 0 0 0px 9999px white', marginLeft: '15px' }}
                                                 st={{
-                                                    display: 'flex',
+                                                    marginBottom: '21px',
                                                     fontFamily: 'Montserrat',
                                                     color: '#3750B2', fontWeight: '600',
                                                     fontSize: '13px',
@@ -284,7 +285,7 @@ class Profile extends Component {
                                     </div>
                                     <div>
                                         <div>
-                                            <div className="first">Last Name</div><br />
+                                            <div className="first">Last Name</div>
                                             <FormField
                                                 id={'lastName'}
                                                 formdata={this.state.formdata.lastName}
@@ -292,7 +293,7 @@ class Profile extends Component {
                                                 useStyle={false}
                                                 inPutStyle={{ background: 'white', boxShadow: 'inset 0 0 0px 9999px white', marginLeft: '15px' }}
                                                 st={{
-                                                    display: 'flex',
+                                                    marginBottom: '21px',
                                                     fontFamily: 'Montserrat',
                                                     color: '#3750B2', fontWeight: '600',
                                                     fontSize: '13px',
@@ -305,14 +306,15 @@ class Profile extends Component {
                                             />
                                         </div>
                                         <div>
-                                            <div className="first">Gender</div><br />
+                                            <div className="first">Gender</div>
                                             <FormField
                                                 id={'gender'}
                                                 formdata={this.state.formdata.gender}
                                                 change={(element) => this.updateForm(element)}
                                                 legend='Sex'
                                                 st={{
-                                                    display: 'flex', padding: '5px 10px 0px 10px',
+                                                    marginBottom: '21px',
+                                                    padding: '5px 10px 0px 10px',
                                                     justifyContent: 'space-between', fontFamily: 'Montserrat',
                                                     color: 'black', fontWeight: '600',
                                                     fontSize: '13px',
@@ -323,7 +325,7 @@ class Profile extends Component {
                                             />
                                         </div>
                                         <div>
-                                            <div className="first">Telephone</div><br />
+                                            <div className="first">Telephone</div>
                                             <FormField
                                                 id={'phoneNumber'}
                                                 formdata={this.state.formdata.phoneNumber}
@@ -331,7 +333,7 @@ class Profile extends Component {
                                                 useStyle={false}
                                                 inPutStyle={{ background: 'white', boxShadow: 'inset 0 0 0px 9999px white', marginLeft: '15px' }}
                                                 st={{
-                                                    display: 'flex',
+                                                    marginBottom: '21px',
                                                     fontFamily: 'Montserrat',
                                                     color: '#3750B2', fontWeight: '600',
                                                     fontSize: '13px',
@@ -357,7 +359,7 @@ class Profile extends Component {
                                                 useStyle={false}
                                                 inPutStyle={{ background: 'white', boxShadow: 'inset 0 0 0px 9999px white', marginLeft: '15px' }}
                                                 st={{
-                                                    display: 'flex',
+                                                    marginBottom: '21px',
                                                     fontFamily: 'Montserrat',
                                                     color: '#3750B2', fontWeight: '600',
                                                     fontSize: '13px',
@@ -373,7 +375,7 @@ class Profile extends Component {
                                     </div>
                                     <div className='city_state_section'>
                                         <div >
-                                            <div className="first">City</div><br />
+                                            <div className="first">City</div>
                                             <FormField
                                                 id={'city'}
                                                 formdata={this.state.formdata.city}
@@ -381,7 +383,7 @@ class Profile extends Component {
                                                 useStyle={false}
                                                 inPutStyle={{ background: 'white', boxShadow: 'inset 0 0 0px 9999px white', marginLeft: '15px' }}
                                                 st={{
-                                                    display: 'flex',
+                                                    marginBottom: '21px',
                                                     fontFamily: 'Montserrat',
                                                     color: '#3750B2', fontWeight: '600',
                                                     fontSize: '13px',
@@ -394,7 +396,7 @@ class Profile extends Component {
                                             />
                                         </div>
                                         <div>
-                                            <div className="first">State</div><br />
+                                            <div className="first">State</div>
                                             <FormField
                                                 id={'state'}
                                                 formdata={this.state.formdata.state}
@@ -402,7 +404,7 @@ class Profile extends Component {
                                                 useStyle={false}
                                                 inPutStyle={{ background: 'white', boxShadow: 'inset 0 0 0px 9999px white', marginLeft: '15px' }}
                                                 st={{
-                                                    display: 'flex',
+                                                    marginBottom: '21px',
                                                     fontFamily: 'Montserrat',
                                                     color: '#3750B2', fontWeight: '600',
                                                     fontSize: '13px',

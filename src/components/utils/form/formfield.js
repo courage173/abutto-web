@@ -38,16 +38,18 @@ class Formfield extends Component {
                                 {formdata.showlabel ?
                                     <div className="label_inputs">{formdata.config.label}</div>
                                     : null}
-                                {fontIcon && fontIcon}
-                                <input
-                                    onFocus={() => this.onFocus(formdata.touched)}
-                                    {...formdata.config}
-                                    value={formdata.value}
-                                    onBlur={(event) => change({ event, id, blur: true })}
-                                    onChange={(event) => change({ event, id })}
-                                    style={inPutStyle}
-                                />
-                                {fontIcon2 && fontIcon2}
+                                <div>
+                                    {fontIcon && fontIcon}
+                                    <input
+                                        onFocus={() => this.onFocus(formdata.touched)}
+                                        {...formdata.config}
+                                        value={formdata.value}
+                                        onBlur={(event) => change({ event, id, blur: true })}
+                                        onChange={(event) => change({ event, id })}
+                                        style={inPutStyle}
+                                    />
+                                    {fontIcon2 && fontIcon2}
+                                </div>
                                 {showError()}
                             </div>
 
