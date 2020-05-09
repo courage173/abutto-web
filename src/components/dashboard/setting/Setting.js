@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import './setting.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEye } from '@fortawesome/free-solid-svg-icons';
-
 import { update, generateData, isFormValid } from '../../utils/form/formActions'
 import FormField from '../../utils/form/formfield';
 
@@ -17,14 +14,14 @@ class Setting extends Component {
         formdata: {
             phoneNumber: {
                 element: 'input',
-                value: '',
+                value: '070 000 000 00',
                 config: {
                     name: 'phone_input',
                     type: 'text',
                     placeholder: '070 000 000 00'
                 },
                 validation: {
-                    required: false,
+                    required: true,
                 },
                 valid: false,
                 touched: false,
@@ -147,7 +144,7 @@ class Setting extends Component {
                                                 useStyle={false}
                                                 inPutStyle={{ background: 'white', boxShadow: 'inset 0 0 0px 9999px white', marginLeft: '15px' }}
                                                 st={{
-                                                    display: 'flex',
+
                                                     fontFamily: 'Montserrat',
                                                     color: '#3750B2', fontWeight: '600',
                                                     fontSize: '13px',
@@ -185,7 +182,7 @@ class Setting extends Component {
                                         useStyle={false}
                                         inPutStyle={{ background: 'white', boxShadow: 'inset 0 0 0px 9999px white', marginLeft: '15px' }}
                                         st={{
-                                            display: 'flex',
+
                                             fontFamily: 'Montserrat',
                                             color: '#3750B2', fontWeight: '600',
                                             fontSize: '13px',
@@ -207,7 +204,7 @@ class Setting extends Component {
                                         useStyle={false}
                                         inPutStyle={{ background: 'white', boxShadow: 'inset 0 0 0px 9999px white', marginLeft: '15px' }}
                                         st={{
-                                            display: 'flex',
+
                                             fontFamily: 'Montserrat',
                                             color: '#3750B2', fontWeight: '600',
                                             fontSize: '13px',
@@ -229,7 +226,7 @@ class Setting extends Component {
                                         useStyle={false}
                                         inPutStyle={{ background: 'white', boxShadow: 'inset 0 0 0px 9999px white', marginLeft: '15px' }}
                                         st={{
-                                            display: 'flex',
+
                                             fontFamily: 'Montserrat',
                                             color: '#3750B2', fontWeight: '600',
                                             fontSize: '13px',

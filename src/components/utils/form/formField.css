@@ -44,8 +44,9 @@ input:focus{
 
 .error_label{
     margin: 9px;
-    font-size: 14px;
+    font-size: 13px;
     color: red;
+    padding: 5px;
 }
 
 .selectInput {
