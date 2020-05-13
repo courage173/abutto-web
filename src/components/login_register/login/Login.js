@@ -1,13 +1,17 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faEye, faKey, } from '@fortawesome/free-solid-svg-icons'
-import { update, generateData, isFormValid } from '../../utils/form/formActions'
+import { update } from '../../utils/form/formActions'
 import FormField from '../../utils/form/formfield';
 import './loginStyle.css';
 import google from '../../../assets/super-g.svg';
 import facebook from '../../../assets/fb_logo.svg';
 import MyButton from '../../utils/button/Button'
+
+import { signInWithFacebook } from '../../../redux/actions/authAction'
 
 
 
@@ -51,6 +55,10 @@ class Login extends Component {
 
         },
 
+    }
+
+    fbLogin = () => {
+        this.props.signInWithFacebook().then(res => this.props.history.push('/profile'))
     }
 
     updateForm = (element) => {
@@ -120,21 +128,22 @@ class Login extends Component {
                     </div>
                     <div id='continue_with_fb_btn' style={{ marginTop: '30px' }}>
                         <MyButton
-                            type='default'
+                            type='btn'
                             title='continue with facebook'
+                            altStyle={{ cursor: 'pointer' }}
                             font={<img style={{ marginRight: '2px' }} src={facebook} alt='google' />}
-                            linkTo='/facebook'
+                            runAction={() => this.fbLogin()}
                             sty={{ margin: '0px' }}
                         />
                     </div>
                     <div style={{ marginTop: '15px', width: '220px' }}>
                         <MyButton
-                            type='default'
+                            type='btn'
                             title='Google Play'
-                            altStyle={{ color: '#3750B2' }}
+                            altStyle={{ color: '#3750B2', cursor: 'pointer' }}
                             sty={{ background: 'none', border: 'none', margin: '0px' }}
                             font={<img style={{ marginRight: '2px' }} src={google} alt='google' />}
-                            linkTo='/google'
+
                         />
                     </div>
                     <div className='account_wrapper'>
@@ -149,4 +158,5 @@ class Login extends Component {
     }
 }
 
-export default Login
+
+export default connect(null, { signInWithFacebook })(withRouter(Login))

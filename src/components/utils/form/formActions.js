@@ -8,6 +8,9 @@ export const validate = (element, formdata = []) => {
         const message = `${!valid ? 'Must be a valid email' : ''}`;
         error = !valid ? [valid, message] : error;
     }
+    // if(element.validation.phone){
+    //     const valid = 
+    // }
 
     if (element.validation.confirm) {
 

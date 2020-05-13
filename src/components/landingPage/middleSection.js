@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MyButton from '../utils/button/Button'
 import CardImage from '../../assets/landpage-card.svg'
-import { update, generateData, isFormValid, populateOptionFields } from '../utils/form/formActions'
+import { update } from '../utils/form/formActions'
 import FormField from '../utils/form/formfield';
 
 class MiddleSection extends Component {
