@@ -5,7 +5,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import './needHelpStyle.css';
 
-import { update, generateData, isFormValid } from '../../utils/form/formActions'
+import { update } from '../../utils/form/formActions'
 import FormField from '../../utils/form/formfield';
 import MyButton from '../../utils/button/Button'
 import MapSection from '../../utils/map/Map'
