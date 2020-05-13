@@ -9,10 +9,11 @@ export default function (ComposedClass, reload, adminRoute = null) {
             loading: true
         }
 
-        componentDidMount() {
+        componentWillMount() {
 
             const authenticated = this.props.user && this.props.user.authenticated
-            if (!authenticated) {
+
+            if (authenticated === false) {
                 this.props.history.push('/login')
             } else {
                 this.setState({ loading: false })

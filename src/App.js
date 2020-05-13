@@ -13,9 +13,11 @@ function App(props) {
   })
 
 
+  useEffect(() => {
+    const token = localStorage.AbuttoToken;
+    props.getFbUser(token).then((item => console.log(item)))
+  })
 
-  const token = localStorage.AbuttoToken;
-  props.getFbUser(token)
 
   return (
     <BrowserRouter>

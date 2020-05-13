@@ -203,9 +203,9 @@ class Register extends Component {
                         />
                         <div id='reg_btn_container' className="block" style={{ marginTop: '30px' }}>
                             <MyButton
-                                type='default'
+                                type='btn'
                                 title='Sign up'
-                                linkTo='/dashboard'
+                                runAction={() => console.log('i aint working yet')}
                                 sty={{
                                     margin: '0px', background: '#E8F5FF',
                                     border: 'none',

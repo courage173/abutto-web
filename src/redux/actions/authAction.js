@@ -1,4 +1,4 @@
-import { USER_LOGIN } from '../type'
+import { USER_LOGIN, USER_LOGOUT } from '../type'
 import firebase from 'firebase';
 
 
@@ -19,7 +19,8 @@ export const signInWithFacebook = () => {
         const user = result.user;
         user.auth =
             localStorage.AbuttoToken = token
-        dispatch(getFbUser(token))
+        return dispatch(getFbUser(token))
+
         // ...
     }).catch(function (error) {
         // const errorCode = error.code;
@@ -44,7 +45,6 @@ export const getFbUser = (token) => {
     return (dispatch) => fetch('https://graph.facebook.com/v2.5/me?fields=email,name,picture.type(large)&access_token=' + token)
         .then((res) => res.json())
         .then((res) => {
-            console.log(res)
             if (res.error) {
                 res.authenticated = false
             } else {
@@ -69,5 +69,18 @@ export const signInWithEmailAndPassword = () => {
 
 }
 
+
+
+export const logout = () => {
+    return (dispatch) => firebase.auth().signOut().then(() => {
+        localStorage.removeItem('AbuttoToken')
+        return dispatch({
+            type: USER_LOGOUT,
+            payload: { authenticated: false }
+        })
+    }).catch((error) => {
+        // An error happened.
+    });
+}
 
 

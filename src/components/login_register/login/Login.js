@@ -58,7 +58,10 @@ class Login extends Component {
     }
 
     fbLogin = () => {
-        this.props.signInWithFacebook().then(res => this.props.history.push('/profile'))
+        this.props.signInWithFacebook().then(res => {
+            console.log(res)
+            return this.props.history.push('/profile')
+        })
     }
 
     updateForm = (element) => {
@@ -113,9 +116,9 @@ class Login extends Component {
                         </div>
                         <div className="block" style={{ marginTop: '30px' }}>
                             <MyButton
-                                type='default'
+                                type='btn'
                                 title='Log in'
-                                linkTo='/provide_help'
+                                runAction={() => console.log("i can't login now")}
                                 sty={{ margin: '0px' }}
                                 mobileStyle
                                 styleToApply='login_btn_style'
