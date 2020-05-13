@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { withRouter, NavLink } from 'react-router-dom';
+import { connect } from 'react-redux'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserCircle, faSearch, faCog, faTh } from '@fortawesome/free-solid-svg-icons';
+import { faUserCircle, faCog, faTh } from '@fortawesome/free-solid-svg-icons';
 import money from '../../assets/money.svg';
-import support from '../../assets/support.svg'
-import bosky from '../../assets/bosky.png'
+// import support from '../../assets/support.svg'
 
 class Sidebar extends Component {
     state = {
@@ -115,18 +116,26 @@ class Sidebar extends Component {
     render() {
         //creat an array of classes called styles so it will be easy to add more class
         const style = ['links_wrapper', this.props.isMobile ? 'open_links' : 'close_links']
+        const { name, picture } = this.props.user
         return (
             <div className={style.join(' ')}>
                 <div className='profile_pic_container'>
                     <div className='profile_image'>
-                        <img src={bosky} alt='profile pics' style={{ height: '109px', width: '108px', borderRadius: '50%', objectFit: 'cover' }} />
+                        <img src={picture.data.url} alt='profile pics' style={{ height: '109px', width: '108px', borderRadius: '50%', objectFit: 'cover' }} />
                     </div>
                 </div>
-                <div className='profile_name' style={{ cursor: 'pointer' }} onClick={() => this.handleProfile()}>Jane Doe</div>
+                <div className='profile_name' style={{ cursor: 'pointer' }} onClick={() => this.handleProfile()}>{name}</div>
                 {this.displayLinks()}
             </div>
         )
     }
 }
 
-export default withRouter(Sidebar)
+function mapStateToProps(state) {
+    return {
+        user: state.auth.user
+    }
+}
+
+export default connect(mapStateToProps, {})(withRouter(Sidebar));
+

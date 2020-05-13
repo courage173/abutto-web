@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import Help from './index'
+import Layout from '../../../hoc/Layout'
 
 function ProvideHelp() {
     const helpData = [{
@@ -34,9 +35,12 @@ function ProvideHelp() {
         location: '0.9mm away'
     }]
     return (
-        <Fragment>
-            <Help helpData={helpData} help='provide' />
-        </Fragment>
+        <Layout>
+            <Fragment>
+                <Help helpData={helpData} help='provide' />
+            </Fragment>
+        </Layout>
+
     )
 }
 

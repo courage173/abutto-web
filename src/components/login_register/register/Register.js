@@ -1,13 +1,17 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux'
+import { Link, withRouter } from 'react-router-dom';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faKey, faEnvelope, faMobileAlt } from '@fortawesome/free-solid-svg-icons'
-import { update, generateData, isFormValid } from '../../utils/form/formActions'
-import FormField from '../../utils/form/formfield';
-import './registerStyle.css';
 import google from '../../../assets/super-g.svg';
 import facebook from '../../../assets/fb_logo.svg';
+
+import { update } from '../../utils/form/formActions'
+import FormField from '../../utils/form/formfield';
+import './registerStyle.css';
 import MyButton from '../../utils/button/Button'
+import { signInWithFacebook } from '../../../redux/actions/authAction'
 
 
 
@@ -97,6 +101,9 @@ class Register extends Component {
 
         },
 
+    }
+    fbLogin = () => {
+        this.props.signInWithFacebook().then(res => this.props.history.push('/profile'))
     }
 
     updateForm = (element) => {
@@ -196,9 +203,9 @@ class Register extends Component {
                         />
                         <div id='reg_btn_container' className="block" style={{ marginTop: '30px' }}>
                             <MyButton
-                                type='default'
+                                type='btn'
                                 title='Sign up'
-                                linkTo='/dashboard'
+                                runAction={() => console.log('i aint working yet')}
                                 sty={{
                                     margin: '0px', background: '#E8F5FF',
                                     border: 'none',
@@ -217,21 +224,22 @@ class Register extends Component {
                     </div>
                     <div id='continue_with_fb_btn_reg' style={{ marginTop: '7px' }}>
                         <MyButton
-                            type='default'
+                            type='btn'
                             title='continue with facebook'
                             font={<img style={{ marginRight: '2px' }} src={facebook} alt='google' />}
-                            linkTo='/facebook'
+                            runAction={() => this.fbLogin()}
                             sty={{ margin: '0px' }}
+                            altStyle={{ cursor: 'pointer' }}
                         />
                     </div>
                     <div style={{ marginTop: '15px', width: '220px' }}>
                         <MyButton
-                            type='default'
+                            type='btn'
                             title='Google Play'
-                            altStyle={{ color: '#3750B2' }}
+                            altStyle={{ color: '#3750B2', cursor: 'pointer' }}
                             sty={{ background: 'none', border: 'none', margin: '0px' }}
                             font={<img style={{ marginRight: '2px' }} src={google} alt='google' />}
-                            linkTo='/google'
+
                         />
                     </div>
                     <div className='support_sigin_wrapper'>
@@ -246,4 +254,4 @@ class Register extends Component {
     }
 }
 
-export default Register
+export default connect(null, { signInWithFacebook })(withRouter(Register))
