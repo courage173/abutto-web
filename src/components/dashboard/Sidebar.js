@@ -7,6 +7,9 @@ import { faUserCircle, faCog, faTh } from '@fortawesome/free-solid-svg-icons';
 import money from '../../assets/money.svg';
 // import support from '../../assets/support.svg'
 
+import MyButton from '../utils/button/Button';
+import { logout } from '../../redux/actions/authAction'
+
 class Sidebar extends Component {
     state = {
         links: [
@@ -71,7 +74,11 @@ class Sidebar extends Component {
         ],
 
     }
+    handleLogout = () => {
+        this.props.logout()
+        this.props.history.push('/')
 
+    }
     displayLinks() {
         return this.state.links.map((link, i) => {
             if (link.name === 'Dashboard') {
@@ -92,10 +99,24 @@ class Sidebar extends Component {
             }
             else if (link.name === 'Logout') {
                 return (
-                    <NavLink activeStyle={{ color: "#3750B2" }} onClick={this.props.close}
-                        id={link.id && link.id} className='links' to={link.linkTo} key={link.name + i} style={{ fontSize: '16px' }}>
-                        {link.name}
-                    </NavLink>
+                    <MyButton
+                        type='btn'
+                        title={link.name}
+                        runAction={this.handleLogout}
+                        sty={{
+                            fontSize: '16px', fontFamily: 'Gill Sans',
+                            fontStyle: 'normal',
+                            fontWeight: 600, marginLeft: '40px',
+                            marginTop: '50px',
+                            marginRight: 0, cursor: 'pointer',
+                            padding: 0,
+                            borderRadius: 0, boxShadow: 'none',
+                            background: 'none', border: 'none'
+                        }}
+
+                        altStyle={{ color: 'hsl(0, 7%, 44%)' }}
+
+                    />
                 )
 
             }
@@ -137,5 +158,5 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, {})(withRouter(Sidebar));
+export default connect(mapStateToProps, { logout })(withRouter(Sidebar));
 
