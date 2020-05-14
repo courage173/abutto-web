@@ -12,7 +12,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 const DashboardHeader = (props) => {
     const { name, picture } = props.user
     const nameAr = name && name.split(' ')
-    const firstName = nameAr[0]
+    const firstName = name && nameAr[0]
 
     return (
         <div className='dashboard_header'>

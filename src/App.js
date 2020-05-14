@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import firebase from 'firebase/app';
-import { getFbUser } from './redux/actions/authAction'
+
 
 import config from './firebase'
 import Routes from './Routes'
@@ -12,13 +12,6 @@ function App(props) {
     firebase.initializeApp(config)
   })
 
-
-  useEffect(() => {
-    const token = localStorage.AbuttoToken;
-    props.getFbUser(token).then((item => console.log(item)))
-  })
-
-
   return (
     <BrowserRouter>
       <Routes />
@@ -26,6 +19,6 @@ function App(props) {
   );
 }
 
-export default connect(null, { getFbUser })(App);
+export default connect(null)(App);
 
 

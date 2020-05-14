@@ -41,7 +41,8 @@ export const signInWithFacebook = () => {
 
 }
 
-export const getFbUser = (token) => {
+export const getFbUser = () => {
+    const token = localStorage.AbuttoToken;
     return (dispatch) => fetch('https://graph.facebook.com/v2.5/me?fields=email,name,picture.type(large)&access_token=' + token)
         .then((res) => res.json())
         .then((res) => {
