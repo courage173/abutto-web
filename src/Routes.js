@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Switch, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { getFbUser } from './redux/actions/authAction'
+
 import Auth from './hoc/auth'
 import LandingPage from './components/landingPage'
 import RegisterLogin from './components/login_register';
@@ -12,7 +15,13 @@ import Setting from './components/dashboard/setting/Setting'
 
 
 
-const Routes = () => {
+
+const Routes = (props) => {
+
+    const { getFbUser } = props
+    useEffect(() => {
+        getFbUser()
+    })
     return (
         <Switch>
             <Route path="/" exact component={LandingPage} />
@@ -36,4 +45,4 @@ const Routes = () => {
 }
 
 
-export default Routes
+export default connect(null, { getFbUser })(Routes)

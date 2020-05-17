@@ -101,7 +101,9 @@ class Header extends Component {
         })
     }
     render() {
-        const { action } = this.props
+        const { action, user } = this.props
+
+        const firstName = user && user.authenticated && user.name.split(' ')[0]
         return (
 
             <header>
@@ -120,12 +122,22 @@ class Header extends Component {
                         </div>
                     </div>
                     <div className='reg_log'>
+                        {
+                            user && user.authenticated ?
+                                < Link to='/profile' style={{ display: 'flex', alignItems: 'center', marginRight: '10px', fontFamily: 'Gill Sans' }}><img src={user.picture && user.picture.data.url} alt='profile' style={{
+                                    height: '39px', width: '39px', borderRadius: '50%',
+                                    objectFit: 'cover'
+                                }} /> <p>Hi, <span>{firstName}</span></p></Link>
+
+                                : null
+                        }
                         <div className='log_reg_btn_wrap'>
                             {this.showLink(this.state.pages)}
                         </div>
+
                     </div>
                 </div>
-            </header>
+            </header >
         )
     }
 
