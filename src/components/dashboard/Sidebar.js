@@ -85,7 +85,7 @@ class Sidebar extends Component {
                 return (
                     <div key={link.name + i} className='dashboardLink'>
                         <div onClick={this.props.close} to={link.linkTo}
-                            key={i}><FontAwesomeIcon icon={faTh}
+                            key={i}><FontAwesomeIcon icon={link.icon}
                                 style={{ color: 'rgba(55, 80, 178, 0.8)', marginRight: '10px' }} />{link.name}</div>
                     </div>
                 )
