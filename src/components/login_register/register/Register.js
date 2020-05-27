@@ -151,11 +151,9 @@ class Register extends Component {
                             useStyle={false}
                             inPutStyle={{ background: 'rgb(232, 245, 255)', boxShadow: 'rgb(232, 245, 255) 0px 0px 0px 9999px inset' }}
                             st={{
-                                display: 'flex',
                                 fontFamily: 'Montserrat',
                                 color: '#3750B2', fontWeight: '600',
                                 fontSize: '13px',
-                                alignItems: 'center',
                                 marginTop: '25px'
                             }}
                             ApplyMobileStyle
@@ -169,11 +167,9 @@ class Register extends Component {
                             useStyle={false}
                             inPutStyle={{ background: 'rgb(232, 245, 255)', boxShadow: 'rgb(232, 245, 255) 0px 0px 0px 9999px inset' }}
                             st={{
-                                display: 'flex',
                                 fontFamily: 'Montserrat',
                                 color: '#3750B2', fontWeight: '600',
                                 fontSize: '13px',
-                                alignItems: 'center',
                                 marginTop: '25px'
                             }}
                             ApplyMobileStyle
