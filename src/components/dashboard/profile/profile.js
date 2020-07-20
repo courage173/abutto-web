@@ -183,6 +183,7 @@ class Profile extends Component {
                                     display: 'flex',
                                     justifyContent: 'end',
                                     alignItems: 'center',
+                                    marginLeft: 0
                                 }}
                             />
                         </div>
